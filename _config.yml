@@ -1,0 +1,28 @@
+name: 'Geoffrey K. Liu, Guy That Writes Shit'
+favicon: null
+layout_spectrum: 0.24440633272752166
+typography_spectrum: 0.9706625558901578
+cta:
+  domain: null
+  bucket: null
+  version: null
+analytics:
+  google: null
+  facebook: null
+  twitter: null
+opengraph:
+  image: null
+  type: null
+  appId: null
+color:
+  brandColors:
+    - '#71A7FE'
+    - '#399AE7'
+    - '#3B407C'
+    - '#547AB1'
+    - '#CEAFC0'
+  brandStrength: 0.0004640251863747835
+  lightness: 0.21713065030053258
+  saturation: 0.45448328787460923
+  rhythmicContrast: 0.5334317984525114
+purpose: []
