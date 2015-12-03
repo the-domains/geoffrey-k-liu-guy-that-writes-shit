@@ -6,8 +6,8 @@ inLanguage: null
 starred: false
 keywords: []
 description: 'Flash fiction, short story: A husband and wife’s visit to a winery goes wrong quickly.'
-datePublished: '2015-12-03T16:34:16.604Z'
-dateModified: '2015-12-02T15:07:36.754Z'
+datePublished: '2015-12-03T17:53:43.692Z'
+dateModified: '2015-12-03T17:53:41.670Z'
 title: The Tasting
 author: []
 sourcePath: _posts/2015-11-27-the-tasting.md
@@ -22,7 +22,7 @@ url: the-tasting/index.html
 _type: Article
 
 ---
-**The Tasting**
+# **The Tasting**
 
 _a flash fiction story, (c)2015, Geoffrey K. Liu_
 
