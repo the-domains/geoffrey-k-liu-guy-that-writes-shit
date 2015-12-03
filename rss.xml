@@ -4,7 +4,7 @@
         <description><![CDATA[Geoffrey K. Liu, Writer]]></description>
         <link>https://thegrid.ai/geoffrey-k-liu-guy-that-writes-shit/</link>
         <generator>The Grid</generator>
-        <lastBuildDate>Thu, 03 Dec 2015 17:53:09 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 03 Dec 2015 17:54:16 GMT</lastBuildDate>
         <atom:link href="https://thegrid.ai/geoffrey-k-liu-guy-that-writes-shit/rss.xml" rel="self" type="application/rss+xml"/>
         <item>
             <title><![CDATA[No title]]></title>
@@ -43,17 +43,17 @@
         </item>
         <item>
             <title><![CDATA[The Tasting]]></title>
-            <description><![CDATA[<h1>The Tasting</h1>]]></description>
+            <description><![CDATA[<article><h1>The Tasting</h1><p>a flash fiction story, ©2015, Geoffrey K. Liu</p></article>]]></description>
             <link>https://thegrid.ai/geoffrey-k-liu-guy-that-writes-shit/the-tasting/index.html</link>
             <guid isPermaLink="false">602c2211-384b-4a37-bfb7-076db1a28781</guid>
-            <pubDate>Thu, 03 Dec 2015 16:34:16 GMT</pubDate>
+            <pubDate>Thu, 03 Dec 2015 17:53:43 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Home Invasion]]></title>
-            <description><![CDATA[<h1>Home Invasion</h1>]]></description>
+            <description><![CDATA[<article><h1>Home Invasion</h1><p>a short story, ©2015, Geoffrey K. Liu</p></article>]]></description>
             <link>https://thegrid.ai/geoffrey-k-liu-guy-that-writes-shit/d24042ec-0444-4c5f-a3ec-9d2dd3047d5a/index.html</link>
             <guid isPermaLink="false">d24042ec-0444-4c5f-a3ec-9d2dd3047d5a</guid>
-            <pubDate>Thu, 03 Dec 2015 16:38:52 GMT</pubDate>
+            <pubDate>Thu, 03 Dec 2015 17:53:26 GMT</pubDate>
         </item>
     </channel>
 </rss>
