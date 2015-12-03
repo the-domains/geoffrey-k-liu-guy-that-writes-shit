@@ -6,8 +6,8 @@ inLanguage: null
 starred: false
 keywords: []
 description: ''
-datePublished: '2015-12-03T19:50:25.798Z'
-dateModified: '2015-12-03T19:50:22.447Z'
+datePublished: '2015-12-03T20:22:43.971Z'
+dateModified: '2015-12-03T20:04:31.447Z'
 title: Violence is the tie that binds us.
 author: []
 sourcePath: _posts/2015-12-03-violence-is-the-tie-that-binds-us.md
