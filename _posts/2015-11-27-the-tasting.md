@@ -3,21 +3,21 @@ inFeed: true
 hasPage: true
 inNav: true
 inLanguage: null
-starred: true
+starred: false
 keywords: []
 description: 'Flash fiction, short story: A husband and wife’s visit to a winery goes wrong quickly.'
-datePublished: '2015-11-27T16:19:22.303Z'
-dateModified: '2015-11-27T16:19:15.923Z'
+datePublished: '2015-12-03T16:34:16.604Z'
+dateModified: '2015-12-02T15:07:36.754Z'
 title: The Tasting
 author: []
+sourcePath: _posts/2015-11-27-the-tasting.md
+published: true
 authors: []
 publisher:
   name: null
   domain: null
   url: null
   favicon: null
-sourcePath: _posts/2015-11-27-the-tasting.md
-published: true
 url: the-tasting/index.html
 _type: Article
 
