@@ -1,7 +1,7 @@
 name: 'Geoffrey K. Liu, Guy That Writes Shit'
 favicon: null
 layout_spectrum: 0.90401
-typography_spectrum: 1
+typography_spectrum: 0.85113
 title: 'Geoffrey K. Liu, Author'
 cta:
   domain: null
@@ -23,7 +23,7 @@ color:
     - '#bca65b'
     - '#045a7b'
   brandStrength: 0.1875
-  lightness: 0.21713065030053258
-  saturation: 0.45448328787460923
-  rhythmicContrast: 0.5334317984525114
+  lightness: 0.4375
+  saturation: 0.1875
+  rhythmicContrast: 0.25
 purpose: []
