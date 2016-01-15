@@ -1,4 +1,4 @@
-<!DOCTYPE HTML><html class="exporting wf-loading"><head><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/><title>The Tasting - Geoffrey K. Liu, Guy That Writes Shit</title><link href="../rss.xml" title="Geoffrey K. Liu, Author feed" rel="alternate" type="application/rss+xml"/><meta name="generator" content="The Grid taylor/0.17.3"><meta name="the-grid-solution" content="269ecfb4-1306-4f70-bdd7-7e6f930ec2fc"><style href="./css/scale/mini.css" media="(max-width: 19.9376em)" rel="stylesheet">@media (max-width: 15.625em){html{font-size:3.09375em !important}}
+<!DOCTYPE HTML><html class="exporting wf-loading"><head><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/><title>The Tasting - Geoffrey K. Liu, Guy That Writes Shit</title><link href="../rss.xml" title="Geoffrey K. Liu, Author feed" rel="alternate" type="application/rss+xml"/><meta name="generator" content="The Grid taylor/0.17.17"><meta name="the-grid-solution" content="c101d79d-1b7f-4e7d-9256-c4f7fc4fd154"><style href="./css/scale/mini.css" media="(max-width: 19.9376em)" rel="stylesheet">@media (max-width: 15.625em){html{font-size:3.09375em !important}}
 @media (min-width: 15.6875em)and (max-width: 15.75em){	html{font-size:3.28125em !important}}
 @media (min-width: 15.8125em)and (max-width: 16.25em){	html{font-size:3.375em !important}}
 @media (min-width: 16.3125em)and (max-width: 16.6875em){html{font-size:3.46875em !important}}
@@ -203,13 +203,6 @@ body {
 .stack {
   z-index: 1;
   transition: transform 0.3s ease-out;
-  -webkit-transition: -webkit-transform 0.3s ease-out;
-}
-.group,
-.aside,
-.decoration {
-  transition: transform 0.3s ease-out;
-  -webkit-transition: -webkit-transform 0.3s ease-out;
 }
 picture {
   display: inline-block;
@@ -270,10 +263,6 @@ html.exporting a {
 .media > a {
   display: inline-block;
 }
-.media iframe {
-  transition: 0.3s opacity ease-in;
-  -webkit-transition: 0.3s opacity ease-in;
-}
 h1 a,
 h2 a,
 h3 a {
@@ -294,15 +283,11 @@ a {
   padding-top: 1px;
   padding-bottom: 1px;
 }
-.text li {
-  margin-left: 1.5em;
-}
 .decoration {
   pointer-events: none;
 }
 .svg {
   position: relative;
-  background-color: currentColor;
 }
 .svg > svg {
   position: absolute;
@@ -328,6 +313,9 @@ a {
 .svg polyline {
   stroke: currentColor;
 }
+.decoration {
+  background-color: currentColor;
+}
 .svg {
   background-color: transparent;
 }
@@ -343,12 +331,39 @@ a {
   background-color: currentColor;
   content: "";
 }
-.colors-style-aside-border .publisher,
-.colors-style-aside-border .author {
-  padding: .4vw .6vw;
+.revealed,
+.revealed > * {
+  pointer-events: none;
 }
-.cover_only_header:first-of-type {
-  position: fixed;
+.revealed .aside,
+.revealed a {
+  pointer-events: all;
+}
+.revealed {
+  background-image: none !important;
+  background-color: none !important;
+}
+.stack,
+.group,
+.aside,
+.decoration,
+.media,
+html body a.media,
+.media img,
+.media picture,
+iframe {
+  min-width: 0;
+  min-height: 0;
+  transition-duration: .3s;
+  transition-property: transform, color, background-color, opacity, clip, z-index, border-width;
+  transition-timing-function: ease-out;
+  -webkit-transition-duration: .3s;
+  -webkit-transition-property: -webkit-transform, color, background-color, opacity, clip, z-index, border-width;
+  -webkit-transition-timing-function: ease-out;
+}
+.media img {
+  transition-property: transform, color, background-color;
+  -webkit-transition-property: -webkit-transform, color, background-color;
 }
 .decoration {
   z-index: 3;
@@ -361,7 +376,7 @@ ul {
 }
 .panel .heading {
   text-transform: uppercase;
-  letter-spacing: .03rem;
+  letter-spacing: 1px;
 }
 .listing:not(.open) .shadow-overlay {
   pointer-events: none;
@@ -376,17 +391,6 @@ ul {
 .group .text,
 .group .aside {
   z-index: 2;
-}
-.group button {
-  border-radius: 3px;
-  padding: 15px 25px;
-  margin-top: 36px;
-}
-.group button:hover {
-  opacity: .8;
-}
-.group .attribution {
-  overflow: hidden;
 }
 .group .attribution:after {
   display: block;
@@ -459,13 +463,14 @@ ul {
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav >.group.listing { text-align: left; }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav-g-heading#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav-g-heading{font-size: 0.164rem; line-height: 0.244rem; height: 0.324rem; width: 4.224rem; position: absolute; top: 0.124rem; left: 0.504rem;}
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav-g-heading-t-headline#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 3.984rem; position: absolute; top: 0rem; left: 0.124rem;}
-#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav-g-listing#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav-g-listing{position: fixed; font-size: 0.164rem; line-height: 0.244rem; height: 7.204rem; width: 4.084rem; top: 0rem; left: -4.084rem; min-height: 42.084rem; z-index: -1; -webkit-transform: translateX(0rem);}
+#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav-g-listing#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav-g-listing{position: fixed; font-size: 0.164rem; line-height: 0.244rem; height: 7.204rem; width: 4.084rem; top: 0rem; left: -4.084rem; min-height: 41.764rem; z-index: -1; -webkit-transform: translateX(0rem);}
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav-g-listing-d-list#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav-g-listing-d-list{font-size: 0.164rem; line-height: 0.244rem; width: 3.364rem; position: absolute; top: 0.964rem; left: 0.244rem;}
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav-g-listing-d-list>li:nth-of-type(1){padding-top: 0.164rem; padding-bottom: 0.164rem; font-size: 0.244rem; line-height: 0.364rem;}
-#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav-g-listing>div:nth-of-type(1){position: absolute; left: 100%; top: 0rem; background-image: linear-gradient(to right, rgba(0, 0, 0, 0.701961), rgba(0, 0, 0, 0)); width: 1.084rem; height: 42.084rem; opacity: 0;}
+#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav-g-listing>div:nth-of-type(1){position: absolute; left: 100%; top: 0rem; background-image: linear-gradient(to right, rgba(0, 0, 0, 0.701961), rgba(0, 0, 0, 0)); width: 1.084rem; height: 41.764rem; opacity: 0;}
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav-d-icon-mobile#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav-d-icon-mobile{height: 0.164rem; width: 0.244rem; position: absolute; top: 0.204rem; left: 0.224rem;}
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav .group.heading > .title.headline { color: rgb(240, 235, 219); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav .group.heading > .title.headline a:hover { color: rgb(160, 188, 196); }
+#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav .group.heading { background-color: rgb(0, 0, 0); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav .group.listing > .data.list { color: rgb(244, 241, 240); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav .group.listing > .data.list a { color: rgb(73, 73, 72); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav .group.listing > .data.list a:hover { color: rgb(82, 82, 81); }
@@ -494,6 +499,7 @@ ul {
 #u-c79088a3-4967-49ea-9ce0-d14b43ed4347#u-c79088a3-4967-49ea-9ce0-d14b43ed4347 .group.textual > .text.paragraph a { color: rgb(39, 82, 98); }
 #u-c79088a3-4967-49ea-9ce0-d14b43ed4347#u-c79088a3-4967-49ea-9ce0-d14b43ed4347 .group.textual > .text.paragraph a:hover { color: rgb(82, 82, 81); }
 #u-c79088a3-4967-49ea-9ce0-d14b43ed4347#u-c79088a3-4967-49ea-9ce0-d14b43ed4347 .group.textual > .decoration.separator { color: rgb(4, 90, 123); }
+#u-c79088a3-4967-49ea-9ce0-d14b43ed4347#u-c79088a3-4967-49ea-9ce0-d14b43ed4347 .group.textual { background-color: rgb(0, 0, 0); }
 #u-c79088a3-4967-49ea-9ce0-d14b43ed4347#u-c79088a3-4967-49ea-9ce0-d14b43ed4347 a { color: rgb(207, 192, 138); }
 #u-c79088a3-4967-49ea-9ce0-d14b43ed4347#u-c79088a3-4967-49ea-9ce0-d14b43ed4347 a:hover { color: rgb(204, 204, 204); }
 #u-c79088a3-4967-49ea-9ce0-d14b43ed4347#u-c79088a3-4967-49ea-9ce0-d14b43ed4347 a:active { color: rgb(255, 255, 255); }
@@ -515,6 +521,7 @@ ul {
 #u-c009b5a1-1459-42f4-b75f-7d7a924a3732#u-c009b5a1-1459-42f4-b75f-7d7a924a3732 .group.column > .text.paragraph { color: rgb(244, 241, 240); }
 #u-c009b5a1-1459-42f4-b75f-7d7a924a3732#u-c009b5a1-1459-42f4-b75f-7d7a924a3732 .group.column > .text.paragraph a { color: rgb(39, 82, 98); }
 #u-c009b5a1-1459-42f4-b75f-7d7a924a3732#u-c009b5a1-1459-42f4-b75f-7d7a924a3732 .group.column > .text.paragraph a:hover { color: rgb(82, 82, 81); }
+#u-c009b5a1-1459-42f4-b75f-7d7a924a3732#u-c009b5a1-1459-42f4-b75f-7d7a924a3732 .group.column { background-color: rgb(0, 0, 0); }
 #u-c009b5a1-1459-42f4-b75f-7d7a924a3732#u-c009b5a1-1459-42f4-b75f-7d7a924a3732 a { color: rgb(207, 192, 138); }
 #u-c009b5a1-1459-42f4-b75f-7d7a924a3732#u-c009b5a1-1459-42f4-b75f-7d7a924a3732 a:hover { color: rgb(204, 204, 204); }
 #u-c009b5a1-1459-42f4-b75f-7d7a924a3732#u-c009b5a1-1459-42f4-b75f-7d7a924a3732 a:active { color: rgb(255, 255, 255); }
@@ -534,6 +541,7 @@ ul {
 #u-0a78ced4-9666-4e68-846a-b73b02909885#u-0a78ced4-9666-4e68-846a-b73b02909885 .group.column > .text.paragraph { color: rgb(244, 241, 240); }
 #u-0a78ced4-9666-4e68-846a-b73b02909885#u-0a78ced4-9666-4e68-846a-b73b02909885 .group.column > .text.paragraph a { color: rgb(39, 82, 98); }
 #u-0a78ced4-9666-4e68-846a-b73b02909885#u-0a78ced4-9666-4e68-846a-b73b02909885 .group.column > .text.paragraph a:hover { color: rgb(82, 82, 81); }
+#u-0a78ced4-9666-4e68-846a-b73b02909885#u-0a78ced4-9666-4e68-846a-b73b02909885 .group.column { background-color: rgb(0, 0, 0); }
 #u-0a78ced4-9666-4e68-846a-b73b02909885#u-0a78ced4-9666-4e68-846a-b73b02909885 a { color: rgb(207, 192, 138); }
 #u-0a78ced4-9666-4e68-846a-b73b02909885#u-0a78ced4-9666-4e68-846a-b73b02909885 a:hover { color: rgb(204, 204, 204); }
 #u-0a78ced4-9666-4e68-846a-b73b02909885#u-0a78ced4-9666-4e68-846a-b73b02909885 a:active { color: rgb(255, 255, 255); }
@@ -554,6 +562,7 @@ ul {
 #u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a#u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a .group.column > .text.paragraph { color: rgb(244, 241, 240); }
 #u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a#u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a .group.column > .text.paragraph a { color: rgb(39, 82, 98); }
 #u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a#u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a .group.column > .text.paragraph a:hover { color: rgb(82, 82, 81); }
+#u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a#u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a .group.column { background-color: rgb(0, 0, 0); }
 #u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a#u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a a { color: rgb(207, 192, 138); }
 #u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a#u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a a:hover { color: rgb(204, 204, 204); }
 #u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a#u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a a:active { color: rgb(255, 255, 255); }
@@ -570,6 +579,7 @@ ul {
 #u-7844732a-4216-4f97-ade0-143abc6bb427#u-7844732a-4216-4f97-ade0-143abc6bb427 .group.column > .text.paragraph { color: rgb(244, 241, 240); }
 #u-7844732a-4216-4f97-ade0-143abc6bb427#u-7844732a-4216-4f97-ade0-143abc6bb427 .group.column > .text.paragraph a { color: rgb(39, 82, 98); }
 #u-7844732a-4216-4f97-ade0-143abc6bb427#u-7844732a-4216-4f97-ade0-143abc6bb427 .group.column > .text.paragraph a:hover { color: rgb(82, 82, 81); }
+#u-7844732a-4216-4f97-ade0-143abc6bb427#u-7844732a-4216-4f97-ade0-143abc6bb427 .group.column { background-color: rgb(0, 0, 0); }
 #u-7844732a-4216-4f97-ade0-143abc6bb427#u-7844732a-4216-4f97-ade0-143abc6bb427 a { color: rgb(207, 192, 138); }
 #u-7844732a-4216-4f97-ade0-143abc6bb427#u-7844732a-4216-4f97-ade0-143abc6bb427 a:hover { color: rgb(204, 204, 204); }
 #u-7844732a-4216-4f97-ade0-143abc6bb427#u-7844732a-4216-4f97-ade0-143abc6bb427 a:active { color: rgb(255, 255, 255); }
@@ -586,6 +596,7 @@ ul {
 #u-b25460aa-ca48-4dca-8e6c-dbe793134d44#u-b25460aa-ca48-4dca-8e6c-dbe793134d44 .group.column > .text.paragraph { color: rgb(244, 241, 240); }
 #u-b25460aa-ca48-4dca-8e6c-dbe793134d44#u-b25460aa-ca48-4dca-8e6c-dbe793134d44 .group.column > .text.paragraph a { color: rgb(39, 82, 98); }
 #u-b25460aa-ca48-4dca-8e6c-dbe793134d44#u-b25460aa-ca48-4dca-8e6c-dbe793134d44 .group.column > .text.paragraph a:hover { color: rgb(82, 82, 81); }
+#u-b25460aa-ca48-4dca-8e6c-dbe793134d44#u-b25460aa-ca48-4dca-8e6c-dbe793134d44 .group.column { background-color: rgb(0, 0, 0); }
 #u-b25460aa-ca48-4dca-8e6c-dbe793134d44#u-b25460aa-ca48-4dca-8e6c-dbe793134d44 a { color: rgb(207, 192, 138); }
 #u-b25460aa-ca48-4dca-8e6c-dbe793134d44#u-b25460aa-ca48-4dca-8e6c-dbe793134d44 a:hover { color: rgb(204, 204, 204); }
 #u-b25460aa-ca48-4dca-8e6c-dbe793134d44#u-b25460aa-ca48-4dca-8e6c-dbe793134d44 a:active { color: rgb(255, 255, 255); }
@@ -604,20 +615,22 @@ ul {
 #u-9d90a045-e05e-4c61-a911-2d288f282e3d#u-9d90a045-e05e-4c61-a911-2d288f282e3d .group.column > .text.paragraph { color: rgb(244, 241, 240); }
 #u-9d90a045-e05e-4c61-a911-2d288f282e3d#u-9d90a045-e05e-4c61-a911-2d288f282e3d .group.column > .text.paragraph a { color: rgb(39, 82, 98); }
 #u-9d90a045-e05e-4c61-a911-2d288f282e3d#u-9d90a045-e05e-4c61-a911-2d288f282e3d .group.column > .text.paragraph a:hover { color: rgb(82, 82, 81); }
+#u-9d90a045-e05e-4c61-a911-2d288f282e3d#u-9d90a045-e05e-4c61-a911-2d288f282e3d .group.column { background-color: rgb(0, 0, 0); }
 #u-9d90a045-e05e-4c61-a911-2d288f282e3d#u-9d90a045-e05e-4c61-a911-2d288f282e3d a { color: rgb(207, 192, 138); }
 #u-9d90a045-e05e-4c61-a911-2d288f282e3d#u-9d90a045-e05e-4c61-a911-2d288f282e3d a:hover { color: rgb(204, 204, 204); }
 #u-9d90a045-e05e-4c61-a911-2d288f282e3d#u-9d90a045-e05e-4c61-a911-2d288f282e3d a:active { color: rgb(255, 255, 255); }
 #u-9d90a045-e05e-4c61-a911-2d288f282e3d#u-9d90a045-e05e-4c61-a911-2d288f282e3d { background-color: rgb(0, 0, 0); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-mobile-l-one-2-l-one#u-284aa817-9ccf-4f40-9870-f2322246dde9-mobile-l-one-2-l-one { background-color: rgb(0, 0, 0); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-mobile-l-one-3#u-284aa817-9ccf-4f40-9870-f2322246dde9-mobile-l-one-3{position: relative;}
-#u-284aa817-9ccf-4f40-9870-f2322246dde9-mobile-l-one-3-l-one#u-284aa817-9ccf-4f40-9870-f2322246dde9-mobile-l-one-3-l-one{position: relative; display: block; width: 4.804rem; height: 1.294rem; top: 0rem; left: 0rem;}
-#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate{font-size: 0.164rem; line-height: 0.204rem; height: 0.814rem; width: 4.324rem; position: absolute; top: 41.034rem; left: 0.244rem;}
+#u-284aa817-9ccf-4f40-9870-f2322246dde9-mobile-l-one-3-l-one#u-284aa817-9ccf-4f40-9870-f2322246dde9-mobile-l-one-3-l-one{position: relative; display: block; width: 4.804rem; height: 0.974rem; top: 0rem; left: 0rem;}
+#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate{font-size: 0.164rem; line-height: 0.204rem; height: 0.494rem; width: 4.324rem; position: absolute; top: 41.034rem; left: 0.244rem;}
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate:before{}
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate >.group.heading { text-align: center; }
-#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate-g-heading#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate-g-heading{font-size: 0.164rem; line-height: 0.244rem; height: 0.644rem; width: 4.084rem; position: absolute; top: 0.094rem; left: 0.124rem;}
+#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate-g-heading#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate-g-heading{font-size: 0.164rem; line-height: 0.244rem; height: 0.324rem; width: 4.084rem; position: absolute; top: 0.094rem; left: 0.124rem;}
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate-g-heading-t-headline#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 3.844rem; position: absolute; top: 0rem; left: 0.124rem;}
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate .group.heading > .title.headline { color: rgb(240, 235, 219); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate .group.heading > .title.headline a:hover { color: rgb(160, 188, 196); }
+#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate .group.heading { background-color: rgb(29, 32, 30); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate a { color: rgb(207, 192, 138); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate a:hover { color: rgb(204, 204, 204); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate a:active { color: rgb(255, 255, 255); }
@@ -650,13 +663,14 @@ display: none;
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav >.group.listing { text-align: left; }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav-g-heading#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav-g-heading{font-size: 0.164rem; line-height: 0.244rem; height: 0.324rem; width: 6.564rem; position: absolute; top: 0.174rem; left: 0.534rem;}
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav-g-heading-t-headline#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 6.204rem; position: absolute; top: 0rem; left: 0.184rem;}
-#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav-g-listing#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav-g-listing{position: fixed; font-size: 0.164rem; line-height: 0.244rem; height: 4.804rem; width: 6.124rem; top: 0rem; left: -6.124rem; min-height: 42.084rem; z-index: -1; -webkit-transform: translateX(0rem);}
+#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav-g-listing#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav-g-listing{position: fixed; font-size: 0.164rem; line-height: 0.244rem; height: 4.804rem; width: 6.124rem; top: 0rem; left: -6.124rem; min-height: 41.764rem; z-index: -1; -webkit-transform: translateX(0rem);}
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav-g-listing-d-list#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav-g-listing-d-list{font-size: 0.164rem; line-height: 0.244rem; width: 5.044rem; position: absolute; top: 1.444rem; left: 0.364rem;}
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav-g-listing-d-list>li:nth-of-type(1){padding-top: 0.164rem; padding-bottom: 0.164rem; font-size: 0.244rem; line-height: 0.364rem;}
-#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav-g-listing>div:nth-of-type(1){position: absolute; left: 100%; top: 0rem; background-image: linear-gradient(to right, rgba(0, 0, 0, 0.701961), rgba(0, 0, 0, 0)); width: 1.084rem; height: 42.084rem; opacity: 0;}
+#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav-g-listing>div:nth-of-type(1){position: absolute; left: 100%; top: 0rem; background-image: linear-gradient(to right, rgba(0, 0, 0, 0.701961), rgba(0, 0, 0, 0)); width: 1.084rem; height: 41.764rem; opacity: 0;}
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav-d-icon-mobile#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav-d-icon-mobile{height: 0.164rem; width: 0.244rem; position: absolute; top: 0.254rem; left: 0.224rem;}
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav .group.heading > .title.headline { color: rgb(240, 235, 219); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav .group.heading > .title.headline a:hover { color: rgb(160, 188, 196); }
+#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav .group.heading { background-color: rgb(0, 0, 0); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav .group.listing > .data.list { color: rgb(244, 241, 240); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav .group.listing > .data.list a { color: rgb(73, 73, 72); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav .group.listing > .data.list a:hover { color: rgb(82, 82, 81); }
@@ -685,6 +699,7 @@ display: none;
 #u-c79088a3-4967-49ea-9ce0-d14b43ed4347#u-c79088a3-4967-49ea-9ce0-d14b43ed4347 .group.textual > .text.paragraph a { color: rgb(39, 82, 98); }
 #u-c79088a3-4967-49ea-9ce0-d14b43ed4347#u-c79088a3-4967-49ea-9ce0-d14b43ed4347 .group.textual > .text.paragraph a:hover { color: rgb(82, 82, 81); }
 #u-c79088a3-4967-49ea-9ce0-d14b43ed4347#u-c79088a3-4967-49ea-9ce0-d14b43ed4347 .group.textual > .decoration.separator { color: rgb(4, 90, 123); }
+#u-c79088a3-4967-49ea-9ce0-d14b43ed4347#u-c79088a3-4967-49ea-9ce0-d14b43ed4347 .group.textual { background-color: rgb(0, 0, 0); }
 #u-c79088a3-4967-49ea-9ce0-d14b43ed4347#u-c79088a3-4967-49ea-9ce0-d14b43ed4347 a { color: rgb(207, 192, 138); }
 #u-c79088a3-4967-49ea-9ce0-d14b43ed4347#u-c79088a3-4967-49ea-9ce0-d14b43ed4347 a:hover { color: rgb(204, 204, 204); }
 #u-c79088a3-4967-49ea-9ce0-d14b43ed4347#u-c79088a3-4967-49ea-9ce0-d14b43ed4347 a:active { color: rgb(255, 255, 255); }
@@ -706,6 +721,7 @@ display: none;
 #u-c009b5a1-1459-42f4-b75f-7d7a924a3732#u-c009b5a1-1459-42f4-b75f-7d7a924a3732 .group.column > .text.paragraph { color: rgb(244, 241, 240); }
 #u-c009b5a1-1459-42f4-b75f-7d7a924a3732#u-c009b5a1-1459-42f4-b75f-7d7a924a3732 .group.column > .text.paragraph a { color: rgb(39, 82, 98); }
 #u-c009b5a1-1459-42f4-b75f-7d7a924a3732#u-c009b5a1-1459-42f4-b75f-7d7a924a3732 .group.column > .text.paragraph a:hover { color: rgb(82, 82, 81); }
+#u-c009b5a1-1459-42f4-b75f-7d7a924a3732#u-c009b5a1-1459-42f4-b75f-7d7a924a3732 .group.column { background-color: rgb(0, 0, 0); }
 #u-c009b5a1-1459-42f4-b75f-7d7a924a3732#u-c009b5a1-1459-42f4-b75f-7d7a924a3732 a { color: rgb(207, 192, 138); }
 #u-c009b5a1-1459-42f4-b75f-7d7a924a3732#u-c009b5a1-1459-42f4-b75f-7d7a924a3732 a:hover { color: rgb(204, 204, 204); }
 #u-c009b5a1-1459-42f4-b75f-7d7a924a3732#u-c009b5a1-1459-42f4-b75f-7d7a924a3732 a:active { color: rgb(255, 255, 255); }
@@ -725,6 +741,7 @@ display: none;
 #u-0a78ced4-9666-4e68-846a-b73b02909885#u-0a78ced4-9666-4e68-846a-b73b02909885 .group.column > .text.paragraph { color: rgb(244, 241, 240); }
 #u-0a78ced4-9666-4e68-846a-b73b02909885#u-0a78ced4-9666-4e68-846a-b73b02909885 .group.column > .text.paragraph a { color: rgb(39, 82, 98); }
 #u-0a78ced4-9666-4e68-846a-b73b02909885#u-0a78ced4-9666-4e68-846a-b73b02909885 .group.column > .text.paragraph a:hover { color: rgb(82, 82, 81); }
+#u-0a78ced4-9666-4e68-846a-b73b02909885#u-0a78ced4-9666-4e68-846a-b73b02909885 .group.column { background-color: rgb(0, 0, 0); }
 #u-0a78ced4-9666-4e68-846a-b73b02909885#u-0a78ced4-9666-4e68-846a-b73b02909885 a { color: rgb(207, 192, 138); }
 #u-0a78ced4-9666-4e68-846a-b73b02909885#u-0a78ced4-9666-4e68-846a-b73b02909885 a:hover { color: rgb(204, 204, 204); }
 #u-0a78ced4-9666-4e68-846a-b73b02909885#u-0a78ced4-9666-4e68-846a-b73b02909885 a:active { color: rgb(255, 255, 255); }
@@ -745,6 +762,7 @@ display: none;
 #u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a#u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a .group.column > .text.paragraph { color: rgb(244, 241, 240); }
 #u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a#u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a .group.column > .text.paragraph a { color: rgb(39, 82, 98); }
 #u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a#u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a .group.column > .text.paragraph a:hover { color: rgb(82, 82, 81); }
+#u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a#u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a .group.column { background-color: rgb(0, 0, 0); }
 #u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a#u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a a { color: rgb(207, 192, 138); }
 #u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a#u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a a:hover { color: rgb(204, 204, 204); }
 #u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a#u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a a:active { color: rgb(255, 255, 255); }
@@ -761,6 +779,7 @@ display: none;
 #u-7844732a-4216-4f97-ade0-143abc6bb427#u-7844732a-4216-4f97-ade0-143abc6bb427 .group.column > .text.paragraph { color: rgb(244, 241, 240); }
 #u-7844732a-4216-4f97-ade0-143abc6bb427#u-7844732a-4216-4f97-ade0-143abc6bb427 .group.column > .text.paragraph a { color: rgb(39, 82, 98); }
 #u-7844732a-4216-4f97-ade0-143abc6bb427#u-7844732a-4216-4f97-ade0-143abc6bb427 .group.column > .text.paragraph a:hover { color: rgb(82, 82, 81); }
+#u-7844732a-4216-4f97-ade0-143abc6bb427#u-7844732a-4216-4f97-ade0-143abc6bb427 .group.column { background-color: rgb(0, 0, 0); }
 #u-7844732a-4216-4f97-ade0-143abc6bb427#u-7844732a-4216-4f97-ade0-143abc6bb427 a { color: rgb(207, 192, 138); }
 #u-7844732a-4216-4f97-ade0-143abc6bb427#u-7844732a-4216-4f97-ade0-143abc6bb427 a:hover { color: rgb(204, 204, 204); }
 #u-7844732a-4216-4f97-ade0-143abc6bb427#u-7844732a-4216-4f97-ade0-143abc6bb427 a:active { color: rgb(255, 255, 255); }
@@ -777,6 +796,7 @@ display: none;
 #u-b25460aa-ca48-4dca-8e6c-dbe793134d44#u-b25460aa-ca48-4dca-8e6c-dbe793134d44 .group.column > .text.paragraph { color: rgb(244, 241, 240); }
 #u-b25460aa-ca48-4dca-8e6c-dbe793134d44#u-b25460aa-ca48-4dca-8e6c-dbe793134d44 .group.column > .text.paragraph a { color: rgb(39, 82, 98); }
 #u-b25460aa-ca48-4dca-8e6c-dbe793134d44#u-b25460aa-ca48-4dca-8e6c-dbe793134d44 .group.column > .text.paragraph a:hover { color: rgb(82, 82, 81); }
+#u-b25460aa-ca48-4dca-8e6c-dbe793134d44#u-b25460aa-ca48-4dca-8e6c-dbe793134d44 .group.column { background-color: rgb(0, 0, 0); }
 #u-b25460aa-ca48-4dca-8e6c-dbe793134d44#u-b25460aa-ca48-4dca-8e6c-dbe793134d44 a { color: rgb(207, 192, 138); }
 #u-b25460aa-ca48-4dca-8e6c-dbe793134d44#u-b25460aa-ca48-4dca-8e6c-dbe793134d44 a:hover { color: rgb(204, 204, 204); }
 #u-b25460aa-ca48-4dca-8e6c-dbe793134d44#u-b25460aa-ca48-4dca-8e6c-dbe793134d44 a:active { color: rgb(255, 255, 255); }
@@ -795,6 +815,7 @@ display: none;
 #u-9d90a045-e05e-4c61-a911-2d288f282e3d#u-9d90a045-e05e-4c61-a911-2d288f282e3d .group.column > .text.paragraph { color: rgb(244, 241, 240); }
 #u-9d90a045-e05e-4c61-a911-2d288f282e3d#u-9d90a045-e05e-4c61-a911-2d288f282e3d .group.column > .text.paragraph a { color: rgb(39, 82, 98); }
 #u-9d90a045-e05e-4c61-a911-2d288f282e3d#u-9d90a045-e05e-4c61-a911-2d288f282e3d .group.column > .text.paragraph a:hover { color: rgb(82, 82, 81); }
+#u-9d90a045-e05e-4c61-a911-2d288f282e3d#u-9d90a045-e05e-4c61-a911-2d288f282e3d .group.column { background-color: rgb(0, 0, 0); }
 #u-9d90a045-e05e-4c61-a911-2d288f282e3d#u-9d90a045-e05e-4c61-a911-2d288f282e3d a { color: rgb(207, 192, 138); }
 #u-9d90a045-e05e-4c61-a911-2d288f282e3d#u-9d90a045-e05e-4c61-a911-2d288f282e3d a:hover { color: rgb(204, 204, 204); }
 #u-9d90a045-e05e-4c61-a911-2d288f282e3d#u-9d90a045-e05e-4c61-a911-2d288f282e3d a:active { color: rgb(255, 255, 255); }
@@ -809,6 +830,7 @@ display: none;
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate-g-heading-t-headline#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 5.764rem; position: absolute; top: 0rem; left: 0.184rem;}
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate .group.heading > .title.headline { color: rgb(240, 235, 219); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate .group.heading > .title.headline a:hover { color: rgb(160, 188, 196); }
+#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate .group.heading { background-color: rgb(29, 32, 30); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate a { color: rgb(207, 192, 138); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate a:hover { color: rgb(204, 204, 204); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate a:active { color: rgb(255, 255, 255); }
@@ -845,9 +867,11 @@ display: none;
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav-g-listing-d-list#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav-g-listing-d-list{border-top-width: 0.024rem; border-top-style: solid; border-top-color: rgba(150, 150, 150, 0.298039); font-size: 0.164rem; padding-top: 0.084rem; margin-top: 0.084rem; line-height: 0.244rem; width: 8.644rem; position: absolute; top: 0rem; left: 0.244rem;}
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav .group.heading > .title.headline { color: rgb(240, 235, 219); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav .group.heading > .title.headline a:hover { color: rgb(160, 188, 196); }
+#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav .group.heading { background-color: rgb(0, 0, 0); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav .group.listing > .data.list { color: rgb(244, 241, 240); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav .group.listing > .data.list a { color: rgb(73, 73, 72); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav .group.listing > .data.list a:hover { color: rgb(82, 82, 81); }
+#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav .group.listing { background-color: rgb(0, 0, 0); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav a { color: rgb(207, 192, 138); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav a:hover { color: rgb(204, 204, 204); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav a:active { color: rgb(255, 255, 255); }
@@ -871,6 +895,7 @@ display: none;
 #u-c79088a3-4967-49ea-9ce0-d14b43ed4347#u-c79088a3-4967-49ea-9ce0-d14b43ed4347 .group.textual > .text.paragraph a { color: rgb(39, 82, 98); }
 #u-c79088a3-4967-49ea-9ce0-d14b43ed4347#u-c79088a3-4967-49ea-9ce0-d14b43ed4347 .group.textual > .text.paragraph a:hover { color: rgb(82, 82, 81); }
 #u-c79088a3-4967-49ea-9ce0-d14b43ed4347#u-c79088a3-4967-49ea-9ce0-d14b43ed4347 .group.textual > .decoration.separator { color: rgb(4, 90, 123); }
+#u-c79088a3-4967-49ea-9ce0-d14b43ed4347#u-c79088a3-4967-49ea-9ce0-d14b43ed4347 .group.textual { background-color: rgb(0, 0, 0); }
 #u-c79088a3-4967-49ea-9ce0-d14b43ed4347#u-c79088a3-4967-49ea-9ce0-d14b43ed4347 a { color: rgb(207, 192, 138); }
 #u-c79088a3-4967-49ea-9ce0-d14b43ed4347#u-c79088a3-4967-49ea-9ce0-d14b43ed4347 a:hover { color: rgb(204, 204, 204); }
 #u-c79088a3-4967-49ea-9ce0-d14b43ed4347#u-c79088a3-4967-49ea-9ce0-d14b43ed4347 a:active { color: rgb(255, 255, 255); }
@@ -892,6 +917,7 @@ display: none;
 #u-c009b5a1-1459-42f4-b75f-7d7a924a3732#u-c009b5a1-1459-42f4-b75f-7d7a924a3732 .group.column > .text.paragraph { color: rgb(244, 241, 240); }
 #u-c009b5a1-1459-42f4-b75f-7d7a924a3732#u-c009b5a1-1459-42f4-b75f-7d7a924a3732 .group.column > .text.paragraph a { color: rgb(39, 82, 98); }
 #u-c009b5a1-1459-42f4-b75f-7d7a924a3732#u-c009b5a1-1459-42f4-b75f-7d7a924a3732 .group.column > .text.paragraph a:hover { color: rgb(82, 82, 81); }
+#u-c009b5a1-1459-42f4-b75f-7d7a924a3732#u-c009b5a1-1459-42f4-b75f-7d7a924a3732 .group.column { background-color: rgb(0, 0, 0); }
 #u-c009b5a1-1459-42f4-b75f-7d7a924a3732#u-c009b5a1-1459-42f4-b75f-7d7a924a3732 a { color: rgb(207, 192, 138); }
 #u-c009b5a1-1459-42f4-b75f-7d7a924a3732#u-c009b5a1-1459-42f4-b75f-7d7a924a3732 a:hover { color: rgb(204, 204, 204); }
 #u-c009b5a1-1459-42f4-b75f-7d7a924a3732#u-c009b5a1-1459-42f4-b75f-7d7a924a3732 a:active { color: rgb(255, 255, 255); }
@@ -911,6 +937,7 @@ display: none;
 #u-0a78ced4-9666-4e68-846a-b73b02909885#u-0a78ced4-9666-4e68-846a-b73b02909885 .group.column > .text.paragraph { color: rgb(244, 241, 240); }
 #u-0a78ced4-9666-4e68-846a-b73b02909885#u-0a78ced4-9666-4e68-846a-b73b02909885 .group.column > .text.paragraph a { color: rgb(39, 82, 98); }
 #u-0a78ced4-9666-4e68-846a-b73b02909885#u-0a78ced4-9666-4e68-846a-b73b02909885 .group.column > .text.paragraph a:hover { color: rgb(82, 82, 81); }
+#u-0a78ced4-9666-4e68-846a-b73b02909885#u-0a78ced4-9666-4e68-846a-b73b02909885 .group.column { background-color: rgb(0, 0, 0); }
 #u-0a78ced4-9666-4e68-846a-b73b02909885#u-0a78ced4-9666-4e68-846a-b73b02909885 a { color: rgb(207, 192, 138); }
 #u-0a78ced4-9666-4e68-846a-b73b02909885#u-0a78ced4-9666-4e68-846a-b73b02909885 a:hover { color: rgb(204, 204, 204); }
 #u-0a78ced4-9666-4e68-846a-b73b02909885#u-0a78ced4-9666-4e68-846a-b73b02909885 a:active { color: rgb(255, 255, 255); }
@@ -931,6 +958,7 @@ display: none;
 #u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a#u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a .group.column > .text.paragraph { color: rgb(244, 241, 240); }
 #u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a#u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a .group.column > .text.paragraph a { color: rgb(39, 82, 98); }
 #u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a#u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a .group.column > .text.paragraph a:hover { color: rgb(82, 82, 81); }
+#u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a#u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a .group.column { background-color: rgb(0, 0, 0); }
 #u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a#u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a a { color: rgb(207, 192, 138); }
 #u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a#u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a a:hover { color: rgb(204, 204, 204); }
 #u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a#u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a a:active { color: rgb(255, 255, 255); }
@@ -947,6 +975,7 @@ display: none;
 #u-7844732a-4216-4f97-ade0-143abc6bb427#u-7844732a-4216-4f97-ade0-143abc6bb427 .group.column > .text.paragraph { color: rgb(244, 241, 240); }
 #u-7844732a-4216-4f97-ade0-143abc6bb427#u-7844732a-4216-4f97-ade0-143abc6bb427 .group.column > .text.paragraph a { color: rgb(39, 82, 98); }
 #u-7844732a-4216-4f97-ade0-143abc6bb427#u-7844732a-4216-4f97-ade0-143abc6bb427 .group.column > .text.paragraph a:hover { color: rgb(82, 82, 81); }
+#u-7844732a-4216-4f97-ade0-143abc6bb427#u-7844732a-4216-4f97-ade0-143abc6bb427 .group.column { background-color: rgb(0, 0, 0); }
 #u-7844732a-4216-4f97-ade0-143abc6bb427#u-7844732a-4216-4f97-ade0-143abc6bb427 a { color: rgb(207, 192, 138); }
 #u-7844732a-4216-4f97-ade0-143abc6bb427#u-7844732a-4216-4f97-ade0-143abc6bb427 a:hover { color: rgb(204, 204, 204); }
 #u-7844732a-4216-4f97-ade0-143abc6bb427#u-7844732a-4216-4f97-ade0-143abc6bb427 a:active { color: rgb(255, 255, 255); }
@@ -963,6 +992,7 @@ display: none;
 #u-b25460aa-ca48-4dca-8e6c-dbe793134d44#u-b25460aa-ca48-4dca-8e6c-dbe793134d44 .group.column > .text.paragraph { color: rgb(244, 241, 240); }
 #u-b25460aa-ca48-4dca-8e6c-dbe793134d44#u-b25460aa-ca48-4dca-8e6c-dbe793134d44 .group.column > .text.paragraph a { color: rgb(39, 82, 98); }
 #u-b25460aa-ca48-4dca-8e6c-dbe793134d44#u-b25460aa-ca48-4dca-8e6c-dbe793134d44 .group.column > .text.paragraph a:hover { color: rgb(82, 82, 81); }
+#u-b25460aa-ca48-4dca-8e6c-dbe793134d44#u-b25460aa-ca48-4dca-8e6c-dbe793134d44 .group.column { background-color: rgb(0, 0, 0); }
 #u-b25460aa-ca48-4dca-8e6c-dbe793134d44#u-b25460aa-ca48-4dca-8e6c-dbe793134d44 a { color: rgb(207, 192, 138); }
 #u-b25460aa-ca48-4dca-8e6c-dbe793134d44#u-b25460aa-ca48-4dca-8e6c-dbe793134d44 a:hover { color: rgb(204, 204, 204); }
 #u-b25460aa-ca48-4dca-8e6c-dbe793134d44#u-b25460aa-ca48-4dca-8e6c-dbe793134d44 a:active { color: rgb(255, 255, 255); }
@@ -981,6 +1011,7 @@ display: none;
 #u-9d90a045-e05e-4c61-a911-2d288f282e3d#u-9d90a045-e05e-4c61-a911-2d288f282e3d .group.column > .text.paragraph { color: rgb(244, 241, 240); }
 #u-9d90a045-e05e-4c61-a911-2d288f282e3d#u-9d90a045-e05e-4c61-a911-2d288f282e3d .group.column > .text.paragraph a { color: rgb(39, 82, 98); }
 #u-9d90a045-e05e-4c61-a911-2d288f282e3d#u-9d90a045-e05e-4c61-a911-2d288f282e3d .group.column > .text.paragraph a:hover { color: rgb(82, 82, 81); }
+#u-9d90a045-e05e-4c61-a911-2d288f282e3d#u-9d90a045-e05e-4c61-a911-2d288f282e3d .group.column { background-color: rgb(0, 0, 0); }
 #u-9d90a045-e05e-4c61-a911-2d288f282e3d#u-9d90a045-e05e-4c61-a911-2d288f282e3d a { color: rgb(207, 192, 138); }
 #u-9d90a045-e05e-4c61-a911-2d288f282e3d#u-9d90a045-e05e-4c61-a911-2d288f282e3d a:hover { color: rgb(204, 204, 204); }
 #u-9d90a045-e05e-4c61-a911-2d288f282e3d#u-9d90a045-e05e-4c61-a911-2d288f282e3d a:active { color: rgb(255, 255, 255); }
@@ -995,6 +1026,7 @@ display: none;
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate-g-heading-t-headline#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 7.684rem; position: absolute; top: 0rem; left: 0.244rem;}
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate .group.heading > .title.headline { color: rgb(240, 235, 219); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate .group.heading > .title.headline a:hover { color: rgb(160, 188, 196); }
+#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate .group.heading { background-color: rgb(29, 32, 30); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate a { color: rgb(207, 192, 138); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate a:hover { color: rgb(204, 204, 204); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate a:active { color: rgb(255, 255, 255); }
@@ -1032,9 +1064,11 @@ display: none;
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav-g-listing-d-list#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav-g-listing-d-list{border-top-width: 0.024rem; border-top-style: solid; border-top-color: rgba(150, 150, 150, 0.298039); font-size: 0.164rem; padding-top: 0.084rem; margin-top: 0.084rem; line-height: 0.244rem; width: 12.964rem; position: absolute; top: 0rem; left: 0.364rem;}
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav .group.heading > .title.headline { color: rgb(240, 235, 219); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav .group.heading > .title.headline a:hover { color: rgb(160, 188, 196); }
+#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav .group.heading { background-color: rgb(0, 0, 0); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav .group.listing > .data.list { color: rgb(244, 241, 240); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav .group.listing > .data.list a { color: rgb(73, 73, 72); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav .group.listing > .data.list a:hover { color: rgb(82, 82, 81); }
+#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav .group.listing { background-color: rgb(0, 0, 0); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav a { color: rgb(207, 192, 138); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav a:hover { color: rgb(204, 204, 204); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav a:active { color: rgb(255, 255, 255); }
@@ -1058,6 +1092,7 @@ display: none;
 #u-c79088a3-4967-49ea-9ce0-d14b43ed4347#u-c79088a3-4967-49ea-9ce0-d14b43ed4347 .group.textual > .text.paragraph a { color: rgb(39, 82, 98); }
 #u-c79088a3-4967-49ea-9ce0-d14b43ed4347#u-c79088a3-4967-49ea-9ce0-d14b43ed4347 .group.textual > .text.paragraph a:hover { color: rgb(82, 82, 81); }
 #u-c79088a3-4967-49ea-9ce0-d14b43ed4347#u-c79088a3-4967-49ea-9ce0-d14b43ed4347 .group.textual > .decoration.separator { color: rgb(4, 90, 123); }
+#u-c79088a3-4967-49ea-9ce0-d14b43ed4347#u-c79088a3-4967-49ea-9ce0-d14b43ed4347 .group.textual { background-color: rgb(0, 0, 0); }
 #u-c79088a3-4967-49ea-9ce0-d14b43ed4347#u-c79088a3-4967-49ea-9ce0-d14b43ed4347 a { color: rgb(207, 192, 138); }
 #u-c79088a3-4967-49ea-9ce0-d14b43ed4347#u-c79088a3-4967-49ea-9ce0-d14b43ed4347 a:hover { color: rgb(204, 204, 204); }
 #u-c79088a3-4967-49ea-9ce0-d14b43ed4347#u-c79088a3-4967-49ea-9ce0-d14b43ed4347 a:active { color: rgb(255, 255, 255); }
@@ -1079,6 +1114,7 @@ display: none;
 #u-c009b5a1-1459-42f4-b75f-7d7a924a3732#u-c009b5a1-1459-42f4-b75f-7d7a924a3732 .group.column > .text.paragraph { color: rgb(244, 241, 240); }
 #u-c009b5a1-1459-42f4-b75f-7d7a924a3732#u-c009b5a1-1459-42f4-b75f-7d7a924a3732 .group.column > .text.paragraph a { color: rgb(39, 82, 98); }
 #u-c009b5a1-1459-42f4-b75f-7d7a924a3732#u-c009b5a1-1459-42f4-b75f-7d7a924a3732 .group.column > .text.paragraph a:hover { color: rgb(82, 82, 81); }
+#u-c009b5a1-1459-42f4-b75f-7d7a924a3732#u-c009b5a1-1459-42f4-b75f-7d7a924a3732 .group.column { background-color: rgb(0, 0, 0); }
 #u-c009b5a1-1459-42f4-b75f-7d7a924a3732#u-c009b5a1-1459-42f4-b75f-7d7a924a3732 a { color: rgb(207, 192, 138); }
 #u-c009b5a1-1459-42f4-b75f-7d7a924a3732#u-c009b5a1-1459-42f4-b75f-7d7a924a3732 a:hover { color: rgb(204, 204, 204); }
 #u-c009b5a1-1459-42f4-b75f-7d7a924a3732#u-c009b5a1-1459-42f4-b75f-7d7a924a3732 a:active { color: rgb(255, 255, 255); }
@@ -1098,6 +1134,7 @@ display: none;
 #u-0a78ced4-9666-4e68-846a-b73b02909885#u-0a78ced4-9666-4e68-846a-b73b02909885 .group.column > .text.paragraph { color: rgb(244, 241, 240); }
 #u-0a78ced4-9666-4e68-846a-b73b02909885#u-0a78ced4-9666-4e68-846a-b73b02909885 .group.column > .text.paragraph a { color: rgb(39, 82, 98); }
 #u-0a78ced4-9666-4e68-846a-b73b02909885#u-0a78ced4-9666-4e68-846a-b73b02909885 .group.column > .text.paragraph a:hover { color: rgb(82, 82, 81); }
+#u-0a78ced4-9666-4e68-846a-b73b02909885#u-0a78ced4-9666-4e68-846a-b73b02909885 .group.column { background-color: rgb(0, 0, 0); }
 #u-0a78ced4-9666-4e68-846a-b73b02909885#u-0a78ced4-9666-4e68-846a-b73b02909885 a { color: rgb(207, 192, 138); }
 #u-0a78ced4-9666-4e68-846a-b73b02909885#u-0a78ced4-9666-4e68-846a-b73b02909885 a:hover { color: rgb(204, 204, 204); }
 #u-0a78ced4-9666-4e68-846a-b73b02909885#u-0a78ced4-9666-4e68-846a-b73b02909885 a:active { color: rgb(255, 255, 255); }
@@ -1118,6 +1155,7 @@ display: none;
 #u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a#u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a .group.column > .text.paragraph { color: rgb(244, 241, 240); }
 #u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a#u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a .group.column > .text.paragraph a { color: rgb(39, 82, 98); }
 #u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a#u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a .group.column > .text.paragraph a:hover { color: rgb(82, 82, 81); }
+#u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a#u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a .group.column { background-color: rgb(0, 0, 0); }
 #u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a#u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a a { color: rgb(207, 192, 138); }
 #u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a#u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a a:hover { color: rgb(204, 204, 204); }
 #u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a#u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a a:active { color: rgb(255, 255, 255); }
@@ -1134,6 +1172,7 @@ display: none;
 #u-7844732a-4216-4f97-ade0-143abc6bb427#u-7844732a-4216-4f97-ade0-143abc6bb427 .group.column > .text.paragraph { color: rgb(244, 241, 240); }
 #u-7844732a-4216-4f97-ade0-143abc6bb427#u-7844732a-4216-4f97-ade0-143abc6bb427 .group.column > .text.paragraph a { color: rgb(39, 82, 98); }
 #u-7844732a-4216-4f97-ade0-143abc6bb427#u-7844732a-4216-4f97-ade0-143abc6bb427 .group.column > .text.paragraph a:hover { color: rgb(82, 82, 81); }
+#u-7844732a-4216-4f97-ade0-143abc6bb427#u-7844732a-4216-4f97-ade0-143abc6bb427 .group.column { background-color: rgb(0, 0, 0); }
 #u-7844732a-4216-4f97-ade0-143abc6bb427#u-7844732a-4216-4f97-ade0-143abc6bb427 a { color: rgb(207, 192, 138); }
 #u-7844732a-4216-4f97-ade0-143abc6bb427#u-7844732a-4216-4f97-ade0-143abc6bb427 a:hover { color: rgb(204, 204, 204); }
 #u-7844732a-4216-4f97-ade0-143abc6bb427#u-7844732a-4216-4f97-ade0-143abc6bb427 a:active { color: rgb(255, 255, 255); }
@@ -1150,6 +1189,7 @@ display: none;
 #u-b25460aa-ca48-4dca-8e6c-dbe793134d44#u-b25460aa-ca48-4dca-8e6c-dbe793134d44 .group.column > .text.paragraph { color: rgb(244, 241, 240); }
 #u-b25460aa-ca48-4dca-8e6c-dbe793134d44#u-b25460aa-ca48-4dca-8e6c-dbe793134d44 .group.column > .text.paragraph a { color: rgb(39, 82, 98); }
 #u-b25460aa-ca48-4dca-8e6c-dbe793134d44#u-b25460aa-ca48-4dca-8e6c-dbe793134d44 .group.column > .text.paragraph a:hover { color: rgb(82, 82, 81); }
+#u-b25460aa-ca48-4dca-8e6c-dbe793134d44#u-b25460aa-ca48-4dca-8e6c-dbe793134d44 .group.column { background-color: rgb(0, 0, 0); }
 #u-b25460aa-ca48-4dca-8e6c-dbe793134d44#u-b25460aa-ca48-4dca-8e6c-dbe793134d44 a { color: rgb(207, 192, 138); }
 #u-b25460aa-ca48-4dca-8e6c-dbe793134d44#u-b25460aa-ca48-4dca-8e6c-dbe793134d44 a:hover { color: rgb(204, 204, 204); }
 #u-b25460aa-ca48-4dca-8e6c-dbe793134d44#u-b25460aa-ca48-4dca-8e6c-dbe793134d44 a:active { color: rgb(255, 255, 255); }
@@ -1168,6 +1208,7 @@ display: none;
 #u-9d90a045-e05e-4c61-a911-2d288f282e3d#u-9d90a045-e05e-4c61-a911-2d288f282e3d .group.column > .text.paragraph { color: rgb(244, 241, 240); }
 #u-9d90a045-e05e-4c61-a911-2d288f282e3d#u-9d90a045-e05e-4c61-a911-2d288f282e3d .group.column > .text.paragraph a { color: rgb(39, 82, 98); }
 #u-9d90a045-e05e-4c61-a911-2d288f282e3d#u-9d90a045-e05e-4c61-a911-2d288f282e3d .group.column > .text.paragraph a:hover { color: rgb(82, 82, 81); }
+#u-9d90a045-e05e-4c61-a911-2d288f282e3d#u-9d90a045-e05e-4c61-a911-2d288f282e3d .group.column { background-color: rgb(0, 0, 0); }
 #u-9d90a045-e05e-4c61-a911-2d288f282e3d#u-9d90a045-e05e-4c61-a911-2d288f282e3d a { color: rgb(207, 192, 138); }
 #u-9d90a045-e05e-4c61-a911-2d288f282e3d#u-9d90a045-e05e-4c61-a911-2d288f282e3d a:hover { color: rgb(204, 204, 204); }
 #u-9d90a045-e05e-4c61-a911-2d288f282e3d#u-9d90a045-e05e-4c61-a911-2d288f282e3d a:active { color: rgb(255, 255, 255); }
@@ -1182,6 +1223,7 @@ display: none;
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate-g-heading-t-headline#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 11.524rem; position: absolute; top: 0rem; left: 0.364rem;}
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate .group.heading > .title.headline { color: rgb(240, 235, 219); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate .group.heading > .title.headline a:hover { color: rgb(160, 188, 196); }
+#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate .group.heading { background-color: rgb(29, 32, 30); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate a { color: rgb(207, 192, 138); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate a:hover { color: rgb(204, 204, 204); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate a:active { color: rgb(255, 255, 255); }
@@ -1219,9 +1261,11 @@ display: none;
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav-g-listing-d-list#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav-g-listing-d-list{border-top-width: 0.024rem; border-top-style: solid; border-top-color: rgba(150, 150, 150, 0.298039); font-size: 0.204rem; padding-top: 0.104rem; margin-top: 0.104rem; line-height: 0.304rem; width: 16.204rem; position: absolute; top: 0rem; left: 0.454rem;}
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav .group.heading > .title.headline { color: rgb(240, 235, 219); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav .group.heading > .title.headline a:hover { color: rgb(160, 188, 196); }
+#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav .group.heading { background-color: rgb(0, 0, 0); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav .group.listing > .data.list { color: rgb(244, 241, 240); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav .group.listing > .data.list a { color: rgb(73, 73, 72); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav .group.listing > .data.list a:hover { color: rgb(82, 82, 81); }
+#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav .group.listing { background-color: rgb(0, 0, 0); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav a { color: rgb(207, 192, 138); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav a:hover { color: rgb(204, 204, 204); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav a:active { color: rgb(255, 255, 255); }
@@ -1245,6 +1289,7 @@ display: none;
 #u-c79088a3-4967-49ea-9ce0-d14b43ed4347#u-c79088a3-4967-49ea-9ce0-d14b43ed4347 .group.textual > .text.paragraph a { color: rgb(39, 82, 98); }
 #u-c79088a3-4967-49ea-9ce0-d14b43ed4347#u-c79088a3-4967-49ea-9ce0-d14b43ed4347 .group.textual > .text.paragraph a:hover { color: rgb(82, 82, 81); }
 #u-c79088a3-4967-49ea-9ce0-d14b43ed4347#u-c79088a3-4967-49ea-9ce0-d14b43ed4347 .group.textual > .decoration.separator { color: rgb(4, 90, 123); }
+#u-c79088a3-4967-49ea-9ce0-d14b43ed4347#u-c79088a3-4967-49ea-9ce0-d14b43ed4347 .group.textual { background-color: rgb(0, 0, 0); }
 #u-c79088a3-4967-49ea-9ce0-d14b43ed4347#u-c79088a3-4967-49ea-9ce0-d14b43ed4347 a { color: rgb(207, 192, 138); }
 #u-c79088a3-4967-49ea-9ce0-d14b43ed4347#u-c79088a3-4967-49ea-9ce0-d14b43ed4347 a:hover { color: rgb(204, 204, 204); }
 #u-c79088a3-4967-49ea-9ce0-d14b43ed4347#u-c79088a3-4967-49ea-9ce0-d14b43ed4347 a:active { color: rgb(255, 255, 255); }
@@ -1266,6 +1311,7 @@ display: none;
 #u-c009b5a1-1459-42f4-b75f-7d7a924a3732#u-c009b5a1-1459-42f4-b75f-7d7a924a3732 .group.column > .text.paragraph { color: rgb(244, 241, 240); }
 #u-c009b5a1-1459-42f4-b75f-7d7a924a3732#u-c009b5a1-1459-42f4-b75f-7d7a924a3732 .group.column > .text.paragraph a { color: rgb(39, 82, 98); }
 #u-c009b5a1-1459-42f4-b75f-7d7a924a3732#u-c009b5a1-1459-42f4-b75f-7d7a924a3732 .group.column > .text.paragraph a:hover { color: rgb(82, 82, 81); }
+#u-c009b5a1-1459-42f4-b75f-7d7a924a3732#u-c009b5a1-1459-42f4-b75f-7d7a924a3732 .group.column { background-color: rgb(0, 0, 0); }
 #u-c009b5a1-1459-42f4-b75f-7d7a924a3732#u-c009b5a1-1459-42f4-b75f-7d7a924a3732 a { color: rgb(207, 192, 138); }
 #u-c009b5a1-1459-42f4-b75f-7d7a924a3732#u-c009b5a1-1459-42f4-b75f-7d7a924a3732 a:hover { color: rgb(204, 204, 204); }
 #u-c009b5a1-1459-42f4-b75f-7d7a924a3732#u-c009b5a1-1459-42f4-b75f-7d7a924a3732 a:active { color: rgb(255, 255, 255); }
@@ -1285,6 +1331,7 @@ display: none;
 #u-0a78ced4-9666-4e68-846a-b73b02909885#u-0a78ced4-9666-4e68-846a-b73b02909885 .group.column > .text.paragraph { color: rgb(244, 241, 240); }
 #u-0a78ced4-9666-4e68-846a-b73b02909885#u-0a78ced4-9666-4e68-846a-b73b02909885 .group.column > .text.paragraph a { color: rgb(39, 82, 98); }
 #u-0a78ced4-9666-4e68-846a-b73b02909885#u-0a78ced4-9666-4e68-846a-b73b02909885 .group.column > .text.paragraph a:hover { color: rgb(82, 82, 81); }
+#u-0a78ced4-9666-4e68-846a-b73b02909885#u-0a78ced4-9666-4e68-846a-b73b02909885 .group.column { background-color: rgb(0, 0, 0); }
 #u-0a78ced4-9666-4e68-846a-b73b02909885#u-0a78ced4-9666-4e68-846a-b73b02909885 a { color: rgb(207, 192, 138); }
 #u-0a78ced4-9666-4e68-846a-b73b02909885#u-0a78ced4-9666-4e68-846a-b73b02909885 a:hover { color: rgb(204, 204, 204); }
 #u-0a78ced4-9666-4e68-846a-b73b02909885#u-0a78ced4-9666-4e68-846a-b73b02909885 a:active { color: rgb(255, 255, 255); }
@@ -1305,6 +1352,7 @@ display: none;
 #u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a#u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a .group.column > .text.paragraph { color: rgb(244, 241, 240); }
 #u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a#u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a .group.column > .text.paragraph a { color: rgb(39, 82, 98); }
 #u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a#u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a .group.column > .text.paragraph a:hover { color: rgb(82, 82, 81); }
+#u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a#u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a .group.column { background-color: rgb(0, 0, 0); }
 #u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a#u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a a { color: rgb(207, 192, 138); }
 #u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a#u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a a:hover { color: rgb(204, 204, 204); }
 #u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a#u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a a:active { color: rgb(255, 255, 255); }
@@ -1321,6 +1369,7 @@ display: none;
 #u-7844732a-4216-4f97-ade0-143abc6bb427#u-7844732a-4216-4f97-ade0-143abc6bb427 .group.column > .text.paragraph { color: rgb(244, 241, 240); }
 #u-7844732a-4216-4f97-ade0-143abc6bb427#u-7844732a-4216-4f97-ade0-143abc6bb427 .group.column > .text.paragraph a { color: rgb(39, 82, 98); }
 #u-7844732a-4216-4f97-ade0-143abc6bb427#u-7844732a-4216-4f97-ade0-143abc6bb427 .group.column > .text.paragraph a:hover { color: rgb(82, 82, 81); }
+#u-7844732a-4216-4f97-ade0-143abc6bb427#u-7844732a-4216-4f97-ade0-143abc6bb427 .group.column { background-color: rgb(0, 0, 0); }
 #u-7844732a-4216-4f97-ade0-143abc6bb427#u-7844732a-4216-4f97-ade0-143abc6bb427 a { color: rgb(207, 192, 138); }
 #u-7844732a-4216-4f97-ade0-143abc6bb427#u-7844732a-4216-4f97-ade0-143abc6bb427 a:hover { color: rgb(204, 204, 204); }
 #u-7844732a-4216-4f97-ade0-143abc6bb427#u-7844732a-4216-4f97-ade0-143abc6bb427 a:active { color: rgb(255, 255, 255); }
@@ -1337,6 +1386,7 @@ display: none;
 #u-b25460aa-ca48-4dca-8e6c-dbe793134d44#u-b25460aa-ca48-4dca-8e6c-dbe793134d44 .group.column > .text.paragraph { color: rgb(244, 241, 240); }
 #u-b25460aa-ca48-4dca-8e6c-dbe793134d44#u-b25460aa-ca48-4dca-8e6c-dbe793134d44 .group.column > .text.paragraph a { color: rgb(39, 82, 98); }
 #u-b25460aa-ca48-4dca-8e6c-dbe793134d44#u-b25460aa-ca48-4dca-8e6c-dbe793134d44 .group.column > .text.paragraph a:hover { color: rgb(82, 82, 81); }
+#u-b25460aa-ca48-4dca-8e6c-dbe793134d44#u-b25460aa-ca48-4dca-8e6c-dbe793134d44 .group.column { background-color: rgb(0, 0, 0); }
 #u-b25460aa-ca48-4dca-8e6c-dbe793134d44#u-b25460aa-ca48-4dca-8e6c-dbe793134d44 a { color: rgb(207, 192, 138); }
 #u-b25460aa-ca48-4dca-8e6c-dbe793134d44#u-b25460aa-ca48-4dca-8e6c-dbe793134d44 a:hover { color: rgb(204, 204, 204); }
 #u-b25460aa-ca48-4dca-8e6c-dbe793134d44#u-b25460aa-ca48-4dca-8e6c-dbe793134d44 a:active { color: rgb(255, 255, 255); }
@@ -1355,6 +1405,7 @@ display: none;
 #u-9d90a045-e05e-4c61-a911-2d288f282e3d#u-9d90a045-e05e-4c61-a911-2d288f282e3d .group.column > .text.paragraph { color: rgb(244, 241, 240); }
 #u-9d90a045-e05e-4c61-a911-2d288f282e3d#u-9d90a045-e05e-4c61-a911-2d288f282e3d .group.column > .text.paragraph a { color: rgb(39, 82, 98); }
 #u-9d90a045-e05e-4c61-a911-2d288f282e3d#u-9d90a045-e05e-4c61-a911-2d288f282e3d .group.column > .text.paragraph a:hover { color: rgb(82, 82, 81); }
+#u-9d90a045-e05e-4c61-a911-2d288f282e3d#u-9d90a045-e05e-4c61-a911-2d288f282e3d .group.column { background-color: rgb(0, 0, 0); }
 #u-9d90a045-e05e-4c61-a911-2d288f282e3d#u-9d90a045-e05e-4c61-a911-2d288f282e3d a { color: rgb(207, 192, 138); }
 #u-9d90a045-e05e-4c61-a911-2d288f282e3d#u-9d90a045-e05e-4c61-a911-2d288f282e3d a:hover { color: rgb(204, 204, 204); }
 #u-9d90a045-e05e-4c61-a911-2d288f282e3d#u-9d90a045-e05e-4c61-a911-2d288f282e3d a:active { color: rgb(255, 255, 255); }
@@ -1369,6 +1420,7 @@ display: none;
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate-g-heading-t-headline#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate-g-heading-t-headline{font-size: 0.304rem; line-height: 0.394rem; width: 14.404rem; position: absolute; top: 0rem; left: 0.454rem;}
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate .group.heading > .title.headline { color: rgb(240, 235, 219); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate .group.heading > .title.headline a:hover { color: rgb(160, 188, 196); }
+#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate .group.heading { background-color: rgb(29, 32, 30); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate a { color: rgb(207, 192, 138); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate a:hover { color: rgb(204, 204, 204); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate a:active { color: rgb(255, 255, 255); }
@@ -1406,9 +1458,11 @@ display: none;
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav-g-listing-d-list#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav-g-listing-d-list{border-top-width: 0.024rem; border-top-style: solid; border-top-color: rgba(150, 150, 150, 0.298039); font-size: 0.154rem; padding-top: 0.084rem; margin-top: 0.084rem; line-height: 0.234rem; width: 16.204rem; position: absolute; top: 0rem; left: 0.454rem;}
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav .group.heading > .title.headline { color: rgb(240, 235, 219); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav .group.heading > .title.headline a:hover { color: rgb(160, 188, 196); }
+#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav .group.heading { background-color: rgb(0, 0, 0); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav .group.listing > .data.list { color: rgb(244, 241, 240); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav .group.listing > .data.list a { color: rgb(73, 73, 72); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav .group.listing > .data.list a:hover { color: rgb(82, 82, 81); }
+#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav .group.listing { background-color: rgb(0, 0, 0); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav a { color: rgb(207, 192, 138); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav a:hover { color: rgb(204, 204, 204); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-nav#u-284aa817-9ccf-4f40-9870-f2322246dde9-nav a:active { color: rgb(255, 255, 255); }
@@ -1432,6 +1486,7 @@ display: none;
 #u-c79088a3-4967-49ea-9ce0-d14b43ed4347#u-c79088a3-4967-49ea-9ce0-d14b43ed4347 .group.textual > .text.paragraph a { color: rgb(39, 82, 98); }
 #u-c79088a3-4967-49ea-9ce0-d14b43ed4347#u-c79088a3-4967-49ea-9ce0-d14b43ed4347 .group.textual > .text.paragraph a:hover { color: rgb(82, 82, 81); }
 #u-c79088a3-4967-49ea-9ce0-d14b43ed4347#u-c79088a3-4967-49ea-9ce0-d14b43ed4347 .group.textual > .decoration.separator { color: rgb(4, 90, 123); }
+#u-c79088a3-4967-49ea-9ce0-d14b43ed4347#u-c79088a3-4967-49ea-9ce0-d14b43ed4347 .group.textual { background-color: rgb(0, 0, 0); }
 #u-c79088a3-4967-49ea-9ce0-d14b43ed4347#u-c79088a3-4967-49ea-9ce0-d14b43ed4347 a { color: rgb(207, 192, 138); }
 #u-c79088a3-4967-49ea-9ce0-d14b43ed4347#u-c79088a3-4967-49ea-9ce0-d14b43ed4347 a:hover { color: rgb(204, 204, 204); }
 #u-c79088a3-4967-49ea-9ce0-d14b43ed4347#u-c79088a3-4967-49ea-9ce0-d14b43ed4347 a:active { color: rgb(255, 255, 255); }
@@ -1453,6 +1508,7 @@ display: none;
 #u-c009b5a1-1459-42f4-b75f-7d7a924a3732#u-c009b5a1-1459-42f4-b75f-7d7a924a3732 .group.column > .text.paragraph { color: rgb(244, 241, 240); }
 #u-c009b5a1-1459-42f4-b75f-7d7a924a3732#u-c009b5a1-1459-42f4-b75f-7d7a924a3732 .group.column > .text.paragraph a { color: rgb(39, 82, 98); }
 #u-c009b5a1-1459-42f4-b75f-7d7a924a3732#u-c009b5a1-1459-42f4-b75f-7d7a924a3732 .group.column > .text.paragraph a:hover { color: rgb(82, 82, 81); }
+#u-c009b5a1-1459-42f4-b75f-7d7a924a3732#u-c009b5a1-1459-42f4-b75f-7d7a924a3732 .group.column { background-color: rgb(0, 0, 0); }
 #u-c009b5a1-1459-42f4-b75f-7d7a924a3732#u-c009b5a1-1459-42f4-b75f-7d7a924a3732 a { color: rgb(207, 192, 138); }
 #u-c009b5a1-1459-42f4-b75f-7d7a924a3732#u-c009b5a1-1459-42f4-b75f-7d7a924a3732 a:hover { color: rgb(204, 204, 204); }
 #u-c009b5a1-1459-42f4-b75f-7d7a924a3732#u-c009b5a1-1459-42f4-b75f-7d7a924a3732 a:active { color: rgb(255, 255, 255); }
@@ -1472,6 +1528,7 @@ display: none;
 #u-0a78ced4-9666-4e68-846a-b73b02909885#u-0a78ced4-9666-4e68-846a-b73b02909885 .group.column > .text.paragraph { color: rgb(244, 241, 240); }
 #u-0a78ced4-9666-4e68-846a-b73b02909885#u-0a78ced4-9666-4e68-846a-b73b02909885 .group.column > .text.paragraph a { color: rgb(39, 82, 98); }
 #u-0a78ced4-9666-4e68-846a-b73b02909885#u-0a78ced4-9666-4e68-846a-b73b02909885 .group.column > .text.paragraph a:hover { color: rgb(82, 82, 81); }
+#u-0a78ced4-9666-4e68-846a-b73b02909885#u-0a78ced4-9666-4e68-846a-b73b02909885 .group.column { background-color: rgb(0, 0, 0); }
 #u-0a78ced4-9666-4e68-846a-b73b02909885#u-0a78ced4-9666-4e68-846a-b73b02909885 a { color: rgb(207, 192, 138); }
 #u-0a78ced4-9666-4e68-846a-b73b02909885#u-0a78ced4-9666-4e68-846a-b73b02909885 a:hover { color: rgb(204, 204, 204); }
 #u-0a78ced4-9666-4e68-846a-b73b02909885#u-0a78ced4-9666-4e68-846a-b73b02909885 a:active { color: rgb(255, 255, 255); }
@@ -1492,6 +1549,7 @@ display: none;
 #u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a#u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a .group.column > .text.paragraph { color: rgb(244, 241, 240); }
 #u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a#u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a .group.column > .text.paragraph a { color: rgb(39, 82, 98); }
 #u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a#u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a .group.column > .text.paragraph a:hover { color: rgb(82, 82, 81); }
+#u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a#u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a .group.column { background-color: rgb(0, 0, 0); }
 #u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a#u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a a { color: rgb(207, 192, 138); }
 #u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a#u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a a:hover { color: rgb(204, 204, 204); }
 #u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a#u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a a:active { color: rgb(255, 255, 255); }
@@ -1508,6 +1566,7 @@ display: none;
 #u-7844732a-4216-4f97-ade0-143abc6bb427#u-7844732a-4216-4f97-ade0-143abc6bb427 .group.column > .text.paragraph { color: rgb(244, 241, 240); }
 #u-7844732a-4216-4f97-ade0-143abc6bb427#u-7844732a-4216-4f97-ade0-143abc6bb427 .group.column > .text.paragraph a { color: rgb(39, 82, 98); }
 #u-7844732a-4216-4f97-ade0-143abc6bb427#u-7844732a-4216-4f97-ade0-143abc6bb427 .group.column > .text.paragraph a:hover { color: rgb(82, 82, 81); }
+#u-7844732a-4216-4f97-ade0-143abc6bb427#u-7844732a-4216-4f97-ade0-143abc6bb427 .group.column { background-color: rgb(0, 0, 0); }
 #u-7844732a-4216-4f97-ade0-143abc6bb427#u-7844732a-4216-4f97-ade0-143abc6bb427 a { color: rgb(207, 192, 138); }
 #u-7844732a-4216-4f97-ade0-143abc6bb427#u-7844732a-4216-4f97-ade0-143abc6bb427 a:hover { color: rgb(204, 204, 204); }
 #u-7844732a-4216-4f97-ade0-143abc6bb427#u-7844732a-4216-4f97-ade0-143abc6bb427 a:active { color: rgb(255, 255, 255); }
@@ -1524,6 +1583,7 @@ display: none;
 #u-b25460aa-ca48-4dca-8e6c-dbe793134d44#u-b25460aa-ca48-4dca-8e6c-dbe793134d44 .group.column > .text.paragraph { color: rgb(244, 241, 240); }
 #u-b25460aa-ca48-4dca-8e6c-dbe793134d44#u-b25460aa-ca48-4dca-8e6c-dbe793134d44 .group.column > .text.paragraph a { color: rgb(39, 82, 98); }
 #u-b25460aa-ca48-4dca-8e6c-dbe793134d44#u-b25460aa-ca48-4dca-8e6c-dbe793134d44 .group.column > .text.paragraph a:hover { color: rgb(82, 82, 81); }
+#u-b25460aa-ca48-4dca-8e6c-dbe793134d44#u-b25460aa-ca48-4dca-8e6c-dbe793134d44 .group.column { background-color: rgb(0, 0, 0); }
 #u-b25460aa-ca48-4dca-8e6c-dbe793134d44#u-b25460aa-ca48-4dca-8e6c-dbe793134d44 a { color: rgb(207, 192, 138); }
 #u-b25460aa-ca48-4dca-8e6c-dbe793134d44#u-b25460aa-ca48-4dca-8e6c-dbe793134d44 a:hover { color: rgb(204, 204, 204); }
 #u-b25460aa-ca48-4dca-8e6c-dbe793134d44#u-b25460aa-ca48-4dca-8e6c-dbe793134d44 a:active { color: rgb(255, 255, 255); }
@@ -1542,6 +1602,7 @@ display: none;
 #u-9d90a045-e05e-4c61-a911-2d288f282e3d#u-9d90a045-e05e-4c61-a911-2d288f282e3d .group.column > .text.paragraph { color: rgb(244, 241, 240); }
 #u-9d90a045-e05e-4c61-a911-2d288f282e3d#u-9d90a045-e05e-4c61-a911-2d288f282e3d .group.column > .text.paragraph a { color: rgb(39, 82, 98); }
 #u-9d90a045-e05e-4c61-a911-2d288f282e3d#u-9d90a045-e05e-4c61-a911-2d288f282e3d .group.column > .text.paragraph a:hover { color: rgb(82, 82, 81); }
+#u-9d90a045-e05e-4c61-a911-2d288f282e3d#u-9d90a045-e05e-4c61-a911-2d288f282e3d .group.column { background-color: rgb(0, 0, 0); }
 #u-9d90a045-e05e-4c61-a911-2d288f282e3d#u-9d90a045-e05e-4c61-a911-2d288f282e3d a { color: rgb(207, 192, 138); }
 #u-9d90a045-e05e-4c61-a911-2d288f282e3d#u-9d90a045-e05e-4c61-a911-2d288f282e3d a:hover { color: rgb(204, 204, 204); }
 #u-9d90a045-e05e-4c61-a911-2d288f282e3d#u-9d90a045-e05e-4c61-a911-2d288f282e3d a:active { color: rgb(255, 255, 255); }
@@ -1556,6 +1617,7 @@ display: none;
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate-g-heading-t-headline#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate-g-heading-t-headline{font-size: 0.234rem; line-height: 0.304rem; width: 14.404rem; position: absolute; top: 0rem; left: 0.454rem;}
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate .group.heading > .title.headline { color: rgb(240, 235, 219); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate .group.heading > .title.headline a:hover { color: rgb(160, 188, 196); }
+#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate .group.heading { background-color: rgb(29, 32, 30); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate a { color: rgb(207, 192, 138); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate a:hover { color: rgb(204, 204, 204); }
 #u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate#u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate a:active { color: rgb(255, 255, 255); }
@@ -1603,13 +1665,13 @@ display: none;
 	 viewBox="0 0 72 72" enable-background="new 0 0 72 72" xml:space="preserve">
 <path fill="#808285" d="M36,2.3L0.3,64.7h71.4L36,2.3z M36,8.3l30.6,53.4H5.4L36,8.3z"/>
 </svg>
-</div><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-c79088a3-4967-49ea-9ce0-d14b43ed4347-g-textual-t-paragraph"><p><i data-grid-id="2a3814b8-d2b6-48f0-906c-b420223de056">a flash fiction story, &#xA9;2015, Geoffrey K. Liu</i></p><p><i data-grid-id="b85dc772-4f9c-4778-8cf6-525e247e02ef"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>Bruxism. Migraine. Period. Fight.</i></p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>T</span>he words marched through Annie&#x2019;s mind along with each <wbr class="w480 w960"></wbr>throb of her sickening <wbr class="w481 w961"></wbr>headache, <wbr class="w1799"></wbr>reminders of her current <wbr class="w480 w960 w1800"></wbr>misery. The bruxism, the fancy-sounding medical <wbr class="w481 w961"></wbr>condition <wbr class="w480 w960"></wbr>of <wbr class="w1799"></wbr>chronic teeth-grinding, had brought on the migraine in <wbr class="w480 w960"></wbr>the <wbr class="w1800"></wbr>car. Her period had <wbr class="w481 w961"></wbr>come a week <wbr class="w1799"></wbr>early, a little gift from <wbr class="w480 w960"></wbr>God. Then had come the fight with Karl over why she <wbr class="w481 w961"></wbr>had <wbr class="w480 w960"></wbr>been so <wbr class="w1799 w1800"></wbr>grumpy and how her mood was souring this trip.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>&#x201C;...when the grappa gets nice and form and yuicy, then <wbr class="w480 w960"></wbr>we&#x2026;.&#x201D; The winery tour guide&#x2019;s <wbr class="w481 w961"></wbr>voice <wbr class="w1799"></wbr>floated in and out of <wbr class="w480 w960"></wbr>her foggy <wbr class="w1800"></wbr>mind just long enough for her to think his accent <wbr class="w480 w960"></wbr>was <wbr class="w481 w961"></wbr>a put on. <wbr class="w1799"></wbr>His thick, hairy knuckles were wrapped <wbr class="w480 w960"></wbr>around one of the big <wbr class="w1800"></wbr>grapes hanging <wbr class="w481 w961"></wbr>from the vine, <wbr class="w1799"></wbr>cradling <wbr class="w480 w960"></wbr>it lovingly. Annie thought, <i data-grid-id="c3d95d85-74e1-4744-bd1a-e3a66efe2a8a">Form and yuicy? And Grappa isn&#x2019;t a <wbr class="w480 w960"></wbr>word <wbr class="w481 w961"></wbr>for grape; it&#x2019;</span>s the <wbr class="w1799 w1800"></wbr>brand name of an Italian brandy. </i></p></div><div kind="decoration" index="separator" class="decoration separator decoration separator svg" id="u-c79088a3-4967-49ea-9ce0-d14b43ed4347-g-textual-d-separator-mobile"><?xml version="1.0" encoding="utf-8"?>
+</div><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-c79088a3-4967-49ea-9ce0-d14b43ed4347-g-textual-t-paragraph"><p><i data-grid-id="2a3814b8-d2b6-48f0-906c-b420223de056">a flash fiction story, &#xA9;2015, Geoffrey K. Liu</i></p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><i data-grid-id="b85dc772-4f9c-4778-8cf6-525e247e02ef">Bruxism. Migraine. Period. Fight.</i></p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">T</span>he words marched through Annie&#x2019;s mind along with each <wbr class="w480 w960"></wbr>throb of her sickening <wbr class="w481 w961"></wbr>headache, <wbr class="w1799"></wbr>reminders of her current <wbr class="w480 w960 w1800"></wbr>misery. The bruxism, the fancy-sounding medical <wbr class="w481 w961"></wbr>condition <wbr class="w480 w960"></wbr>of <wbr class="w1799"></wbr>chronic teeth-grinding, had brought on the migraine in <wbr class="w480 w960"></wbr>the <wbr class="w1800"></wbr>car. Her period had <wbr class="w481 w961"></wbr>come a week <wbr class="w1799"></wbr>early, a little gift from <wbr class="w480 w960"></wbr>God. Then had come the fight with Karl over why she <wbr class="w481 w961"></wbr>had <wbr class="w480 w960"></wbr>been so <wbr class="w1799 w1800"></wbr>grumpy and how her mood was souring this trip.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">&#x201C;...when the grappa gets nice and form and yuicy, then <wbr class="w480 w960"></wbr>we&#x2026;.&#x201D; The winery tour guide&#x2019;s <wbr class="w481 w961"></wbr>voice <wbr class="w1799"></wbr>floated in and out of <wbr class="w480 w960"></wbr>her foggy <wbr class="w1800"></wbr>mind just long enough for her to think his accent <wbr class="w480 w960"></wbr>was <wbr class="w481 w961"></wbr>a put on. <wbr class="w1799"></wbr>His thick, hairy knuckles were wrapped <wbr class="w480 w960"></wbr>around one of the big <wbr class="w1800"></wbr>grapes hanging <wbr class="w481 w961"></wbr>from the vine, <wbr class="w1799"></wbr>cradling <wbr class="w480 w960"></wbr>it lovingly. Annie thought, <i data-grid-id="c3d95d85-74e1-4744-bd1a-e3a66efe2a8a">Form and yuicy? And Grappa isn&#x2019;t a <wbr class="w480 w960"></wbr>word <wbr class="w481 w961"></wbr>for grape; it&#x2019;</span>s the <wbr class="w1799 w1800"></wbr>brand name of an Italian brandy. </i></p></div><div kind="decoration" index="separator" class="decoration separator decoration separator svg" id="u-c79088a3-4967-49ea-9ce0-d14b43ed4347-g-textual-d-separator-mobile"><?xml version="1.0" encoding="utf-8"?>
 
 <svg preserveAspectRatio="none" id="u-c79088a3-4967-49ea-9ce0-d14b43ed4347-g-textual-d-separator-mobile-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 72 72" enable-background="new 0 0 72 72" xml:space="preserve">
 <path fill="#808285" d="M36,2.3L0.3,64.7h71.4L36,2.3z M36,8.3l30.6,53.4H5.4L36,8.3z"/>
 </svg>
-</div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="c009b5a1-1459-42f4-b75f-7d7a924a3732" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-c009b5a1-1459-42f4-b75f-7d7a924a3732"><div kind="group" index="column" class="group column group column" id="u-c009b5a1-1459-42f4-b75f-7d7a924a3732-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-c009b5a1-1459-42f4-b75f-7d7a924a3732-g-column-t-paragraph"><p><span class="first-letter">I</span>t hardly seemed important, even as the tour guide droned <wbr class="w480 w960"></wbr>on in his obviously fake accent-<wbr class="w481 w961 w1799"></wbr>-obvious to her, anyway. <wbr class="w480"></wbr>The <wbr class="w960"></wbr>rest <wbr class="w1800"></wbr>of their group was utterly charmed by him. </p><p><i data-grid-id="c616ccc2-dcc5-41d5-a836-a3705350e489"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>Grappa. Form and yuicy. Bruxism. Migraine. Period. Fight.</i></p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>A</span>s the group began working its way through the rows of <wbr class="w480 w960"></wbr>grapevines again, Annie felt a <wbr class="w481 w961"></wbr>hand <wbr class="w1799"></wbr>on her arm. It was Karl.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>&#x201C;Honey, you okay?&#x201D;</span></p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>&#x201C;No, Karl, I told you I&#x2019;m not okay.&#x201D;</span></p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>&#x201C;You look awful.&#x201D;</span></p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>&#x201C;Thank you so much.&#x201D;</span></p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>&#x201C;No, I mean--&#x201D; Karl sputtered. &#x201C;I&#x2019;m sorry about before. I <wbr class="w480 w960"></wbr>know you don&#x2019;t feel good, and I <wbr class="w481 w961 w1799"></wbr>shouldn&#x2019;t have dragged you <wbr class="w480 w960"></wbr>here.&#x201D;</span></p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>&#x201C;I&#x2019;m sorry too, you&#x2019;ve been looking forward to this,&#x201D; Annie <wbr class="w480 w960"></wbr>said. &#x201C;I know this place makes <wbr class="w481 w961 w1799"></wbr>your favorite wine.&#x201D;</span></p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>&#x201C;Our favorite wine,&#x201D;</span> Karl corrected.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="0a78ced4-9666-4e68-846a-b73b02909885" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-0a78ced4-9666-4e68-846a-b73b02909885"><div kind="group" index="column" class="group column group column" id="u-0a78ced4-9666-4e68-846a-b73b02909885-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-0a78ced4-9666-4e68-846a-b73b02909885-g-column-t-paragraph"><p><span class="first-letter">&#x201C;Yes, ours. But I feel like if I touch a drop, I&#x2019;m going to <wbr class="w480 w960"></wbr>barf.&#x201D; Annie dropped her voice to a <wbr class="w481 w961 w1799"></wbr>conspiratorial level. <wbr class="w480 w960"></wbr>&#x201C;And am I the <wbr class="w1800"></wbr>only one who noticed this guy&#x2019;s accent is total <wbr class="w480 w960"></wbr>bullshit?&#x201D;</span></p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>K</span>arl looked perplexed and glanced at their guide. &#x201C;I hadn&#x2019;t <wbr class="w480 w960"></wbr>noticed.&#x201D;</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>&#x201C;Whatever. Can we go?&#x201D;</span></p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>K</span>arl gave her a patronizing but relenting look. &#x201C;Okay. Let&#x2019;s <wbr class="w480 w960"></wbr>go back to the hotel.&#x201D;</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>&#x201C;Do it quietly, so Mr. Grappa doesn&#x2019;t notice.&#x201D;</span></p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>&#x201C;What?&#x201D;</span></p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>&#x201C;Forget it.&#x201D;</span></p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>T</span>he two of them snuck away from the tour group, then over <wbr class="w480 w960"></wbr>to the next row of <wbr class="w481 w961"></wbr>grapevines. <wbr class="w1799"></wbr>There was a clear path back <wbr class="w480 w960"></wbr>to <wbr class="w1800"></wbr>the visitor&#x2019;s center, and Annie could see a <wbr class="w481 w961"></wbr>gathering of a <wbr class="w480 w960"></wbr>dozen <wbr class="w1799"></wbr>or so people on the granite patio there, highlighted by <wbr class="w480 w960"></wbr>the <wbr class="w1800"></wbr>flickering <wbr class="w481 w961"></wbr>flames of a large fire in a <wbr class="w1799"></wbr>fire pit and the <wbr class="w480 w960"></wbr>orange-red hues of evening sunlight.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="c95f3c32-25ef-4f13-a0b7-5a2f48db817a" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a"><div kind="group" index="column" class="group column group column" id="u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a-g-column-t-paragraph"><p><span class="first-letter">&#x201C;Lovely,&#x201D; Annie said, &#x201C;now we have to sneak back through a <wbr class="w480 w960"></wbr>party.&#x201D;</span></p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>&#x201C;Quit being so paranoid, no one cares if we leave.&#x201D;</span></p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>&#x201C;But look, they&#x2019;re all dressed up, it&#x2019;s some kind of formal <wbr class="w480 w960"></wbr>thing.&#x201D;</span></p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>K</span>arl sighed. &#x201C;Just come on, Ann.&#x201D;</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>H</span>e pulled her along the row of grapevines. As they <wbr class="w480 w960"></wbr>approached the visitor&#x2019;s center, her <wbr class="w481 w961"></wbr>eyes <wbr class="w1799"></wbr>rested on the <wbr class="w480 w960"></wbr>people there, all of <wbr class="w1800"></wbr>them dressed in their finest evening <wbr class="w480 w960"></wbr>wear, the men <wbr class="w481 w961"></wbr>in <wbr class="w1799"></wbr>tuxedos, the women in gowns. What was <wbr class="w480 w960"></wbr>this? </p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>A</span>s they drew closer, all eyes turned and looked at them.</p><p><i data-grid-id="e9e3dba1-32c0-4783-9a9f-dcbdd54ed379"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>Bruxism. Migraine. Period. Fight. Scrutiny. </i>The words, and her <wbr class="w480 w960"></wbr>head, throbbed even harder.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>A</span> man broke off the group and walked to the edge of the <wbr class="w480 w960"></wbr>patio. His grin beneath a neat <wbr class="w481 w961"></wbr>pencil <wbr class="w1799"></wbr>mustache was almost a <wbr class="w480 w960"></wbr>rictus. <wbr class="w1800"></wbr>His black hair was combed into an oily slick. It has to <wbr class="w480 w481 w960 w961"></wbr>be <wbr class="w1799"></wbr>Brylcreem, Annie thought. Do they still make Brylcreem?</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>&#x201C;Welcome, friends,&#x201D;</span> the man said.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="7844732a-4216-4f97-ade0-143abc6bb427" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-7844732a-4216-4f97-ade0-143abc6bb427"><div kind="group" index="column" class="group column group column" id="u-7844732a-4216-4f97-ade0-143abc6bb427-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-7844732a-4216-4f97-ade0-143abc6bb427-g-column-t-paragraph"><p><span class="first-letter">&#x201C;We were just leaving,&#x201D;</span> Karl said, a thick waver in his voice.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>T</span>he man cocked his head quizzically to one side. &#x201C;You&#x2019;re not <wbr class="w480 w960"></wbr>here for the tasting?&#x201D;</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>&#x201C;No. My--my wife is ill. We&#x2019;ll have to come back tomorrow <wbr class="w480 w960"></wbr>evening.&#x201D;</span></p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>T</span>he man stared at them--everyone stared at them--and his <wbr class="w480 w960"></wbr>grin faltered a bit. His terrible <wbr class="w481 w961"></wbr>grin. <wbr class="w1799"></wbr>His black eyes slipped <wbr class="w480 w960"></wbr>behind <wbr class="w1800"></wbr>them for a moment. Annie glanced back and saw <wbr class="w480 w960"></wbr>that <wbr class="w481 w961"></wbr>their tour <wbr class="w1799"></wbr>group, including Mr. Grappa, had followed <wbr class="w480 w960"></wbr>them up here <wbr class="w1800"></wbr>and was standing as <wbr class="w481 w961"></wbr>silently as the <wbr class="w1799"></wbr>others.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>&#x201C;We&#x2019;re sorry to interrupt your party,&#x201D; Annie said, &#x201C;but may <wbr class="w480 w960"></wbr>we get by?&#x201D; Her eyes settled on <wbr class="w481 w961"></wbr>the <wbr class="w1799"></wbr>double doors leading <wbr class="w480 w960"></wbr>through <wbr class="w1800"></wbr>the visitor&#x2019;</span>s center, to the parking lot beyond, and <wbr class="w480 w960"></wbr>away <wbr class="w481 w961"></wbr>from <wbr class="w1799"></wbr>this awkwardness.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="b25460aa-ca48-4dca-8e6c-dbe793134d44" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-b25460aa-ca48-4dca-8e6c-dbe793134d44"><div kind="group" index="column" class="group column group column" id="u-b25460aa-ca48-4dca-8e6c-dbe793134d44-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-b25460aa-ca48-4dca-8e6c-dbe793134d44-g-column-t-paragraph"><p><span class="first-letter">M</span>r. Brylcreem stepped aside to let them pass. She and Karl <wbr class="w480 w960"></wbr>stepped onto the patio, but <wbr class="w481 w961"></wbr>after a <wbr class="w1799"></wbr>moment, she felt <wbr class="w480 w960"></wbr>Brylcreem&#x2019;s <wbr class="w1800"></wbr>grip on her shoulder. She barely noticed Karl&#x2019;s <wbr class="w480 w960"></wbr>hand <wbr class="w481 w961"></wbr>slipping <wbr class="w1799"></wbr>from her own. She turned into Brylcreem&#x2019;s <wbr class="w480 w960"></wbr>piercing black gaze.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>&#x201C;This tasting is for you,&#x201D;</span> he said.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>H</span>e gestured slightly with his head, and Annie saw a large <wbr class="w480 w960"></wbr>cart being wheeled out by two <wbr class="w481 w961"></wbr>men <wbr class="w1799"></wbr>in chef&#x2019;s jackets. Her <wbr class="w480 w960"></wbr>breath <wbr class="w1800"></wbr>hitched violently. The cart held the most exquisite ice <wbr class="w480 w481 w960 w961"></wbr>sculpture <wbr class="w1799"></wbr>she had ever seen. The detail was perfect, the <wbr class="w480"></wbr>nude <wbr class="w960"></wbr>female <wbr class="w1800"></wbr>figure carved in <wbr class="w481 w961"></wbr>smooth, crystal-<wbr class="w1799"></wbr>clear ice, <wbr class="w480"></wbr>standing <wbr class="w960"></wbr>daintily on its toes, arms down, palms turned <wbr class="w480"></wbr>forward, <wbr class="w481 w961"></wbr>head <wbr class="w960"></wbr>turned to <wbr class="w1800"></wbr>one <wbr class="w1799"></wbr>side. The tranquil face was <wbr class="w480"></wbr>familiar and <wbr class="w960"></wbr>unmistakable. It was her face. <wbr class="w481 w961"></wbr>It was Annie&#x2019;s <wbr class="w480"></wbr>face.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>T</span>he men stopped the cart in the middle of the patio as the <wbr class="w480 w960"></wbr>group around her gasped in <wbr class="w481 w961 w1799"></wbr>appreciation of the sculpture.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>&#x201C;Oh god,&#x201D; Annie whispered. &#x201C;Karl?&#x201D;</span></p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i last_chapter w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="9d90a045-e05e-4c61-a911-2d288f282e3d" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-9d90a045-e05e-4c61-a911-2d288f282e3d"><div kind="group" index="column" class="group column group column" id="u-9d90a045-e05e-4c61-a911-2d288f282e3d-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-9d90a045-e05e-4c61-a911-2d288f282e3d-g-column-t-paragraph"><p><span class="first-letter">S</span>he glanced around in a panic. Karl was gone and she felt <wbr class="w480 w960"></wbr>her last defense crumble.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>O</span>ne of the men in white picked up a crystal decanter filled <wbr class="w480 w960"></wbr>with translucent pink liquid. He <wbr class="w481 w961 w1799"></wbr>held it up to the back of the <wbr class="w480 w960 w1800"></wbr>sculpture&#x2019;s head and poured. The liquid drifted down, <wbr class="w480 w481 w960 w961 w1799"></wbr>highlighting the exceptionally detailed system of veins inside <wbr class="w480 w960"></wbr>the <wbr class="w1800"></wbr>thing.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>&#x201C;It&#x2019;s--it&#x2019;s me? How?&#x201D;</span> Annie said, and Mr. Brylcreem only <wbr class="w480 w960"></wbr>smiled wider.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>T</span>he pink liquid filled the sculpture&#x2019;s veins from head to toe. <wbr class="w480 w960"></wbr>To Annie&#x2019;s horror, some of <wbr class="w481 w961"></wbr>the <wbr class="w1799"></wbr>liquid dripped from between <wbr class="w480 w960"></wbr>the <wbr class="w1800"></wbr>sculpture&#x2019;s legs, running in rivulets down the inner <wbr class="w480 w481 w960 w961"></wbr>thighs <wbr class="w1799"></wbr>into a crystal bowl at the sculpture&#x2019;s feet.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>&#x201C;What is this?&#x201D; Annie asked. &#x201C;Where&#x2019;s my husband?&#x201D;</span></p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>B</span>rylcreem&#x2019;s grip tightened on her shoulder, and he said, &#x201C;Let <wbr class="w480 w960"></wbr>the tasting begin.&#x201D;</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>T</span>he congregation closed in.</p></div></div></article><article subject="panel" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_center uninverted vertical collapsed full line_padding_aside_inside text_width_full group_h_align_none text_align_center flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_small panel stack heading i first_panel last_panel w_headline w_title w_decoration w_short_headline w_short_title stack heading" itemid="u-page-alternate" itemtype="alternate" diff_index="2" index="heading" kind="stack" score="1.875" missed="0.125" tag="article" id="u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate"><div kind="group" index="heading" class="group heading group heading" id="u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate-g-heading"><h1 kind="title" index="headline" class="short short_headline short_title title headline vfld-leader vfld-trailer title headline" specificity="0.25" itemprop="title" id="u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate-g-heading-t-headline"><a class="text-decoration" href="../rss.xml" id="u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate-g-heading-t-headline-a">Geoffrey K. Liu, Author<wbr class="w480"></wbr> feed</a></h1></div></article><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title w_list w_data w_short_list w_short_data layout one" id="u-284aa817-9ccf-4f40-9870-f2322246dde9-desktop-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-284aa817-9ccf-4f40-9870-f2322246dde9-desktop-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="article" diff_index="0" index="one" class="layout one i w_headline w_title w_paragraph w_text w_separator w_decoration w_leader w_short_headline w_short_title w_long_paragraph w_long_text layout one" id="u-284aa817-9ccf-4f40-9870-f2322246dde9-desktop-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_texts colors-use-same-as-previous layout one i first_layout last_layout article layout one" id="u-284aa817-9ccf-4f40-9870-f2322246dde9-desktop-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-284aa817-9ccf-4f40-9870-f2322246dde9-desktop-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-284aa817-9ccf-4f40-9870-f2322246dde9-desktop-l-one-3-l-one"></div><style id="u-284aa817-9ccf-4f40-9870-f2322246dde9-color">body{background-color: rgba(29, 32, 30, 1)}</style></section><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title w_list w_data w_short_list w_short_data layout one" id="u-284aa817-9ccf-4f40-9870-f2322246dde9-cinema-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-284aa817-9ccf-4f40-9870-f2322246dde9-cinema-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="article" diff_index="0" index="one" class="layout one i w_headline w_title w_paragraph w_text w_separator w_decoration w_leader w_short_headline w_short_title w_long_paragraph w_long_text layout one" id="u-284aa817-9ccf-4f40-9870-f2322246dde9-cinema-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_texts colors-use-same-as-previous layout one i first_layout last_layout article layout one" id="u-284aa817-9ccf-4f40-9870-f2322246dde9-cinema-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-284aa817-9ccf-4f40-9870-f2322246dde9-cinema-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-284aa817-9ccf-4f40-9870-f2322246dde9-cinema-l-one-3-l-one"></div><style id="u-284aa817-9ccf-4f40-9870-f2322246dde9-color">body{background-color: rgba(29, 32, 30, 1)}</style></section></div><script href="./client.js">(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+</div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="c009b5a1-1459-42f4-b75f-7d7a924a3732" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-c009b5a1-1459-42f4-b75f-7d7a924a3732"><div kind="group" index="column" class="group column group column" id="u-c009b5a1-1459-42f4-b75f-7d7a924a3732-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-c009b5a1-1459-42f4-b75f-7d7a924a3732-g-column-t-paragraph"><p><span class="first-letter">I</span>t hardly seemed important, even as the tour guide droned <wbr class="w480 w960"></wbr>on in his obviously fake accent-<wbr class="w481 w961 w1799"></wbr>-obvious to her, anyway. <wbr class="w480"></wbr>The <wbr class="w960"></wbr>rest <wbr class="w1800"></wbr>of their group was utterly charmed by him. </p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><i data-grid-id="c616ccc2-dcc5-41d5-a836-a3705350e489">Grappa. Form and yuicy. Bruxism. Migraine. Period. Fight.</i></p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">A</span>s the group began working its way through the rows of <wbr class="w480 w960"></wbr>grapevines again, Annie felt a <wbr class="w481 w961"></wbr>hand <wbr class="w1799"></wbr>on her arm. It was Karl.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">&#x201C;Honey, you okay?&#x201D;</span></p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">&#x201C;No, Karl, I told you I&#x2019;m not okay.&#x201D;</span></p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">&#x201C;You look awful.&#x201D;</span></p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">&#x201C;Thank you so much.&#x201D;</span></p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">&#x201C;No, I mean--&#x201D; Karl sputtered. &#x201C;I&#x2019;m sorry about before. I <wbr class="w480 w960"></wbr>know you don&#x2019;t feel good, and I <wbr class="w481 w961 w1799"></wbr>shouldn&#x2019;t have dragged you <wbr class="w480 w960"></wbr>here.&#x201D;</span></p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">&#x201C;I&#x2019;m sorry too, you&#x2019;ve been looking forward to this,&#x201D; Annie <wbr class="w480 w960"></wbr>said. &#x201C;I know this place makes <wbr class="w481 w961 w1799"></wbr>your favorite wine.&#x201D;</span></p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">&#x201C;Our favorite wine,&#x201D;</span> Karl corrected.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="0a78ced4-9666-4e68-846a-b73b02909885" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-0a78ced4-9666-4e68-846a-b73b02909885"><div kind="group" index="column" class="group column group column" id="u-0a78ced4-9666-4e68-846a-b73b02909885-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-0a78ced4-9666-4e68-846a-b73b02909885-g-column-t-paragraph"><p><span class="first-letter">&#x201C;Yes, ours. But I feel like if I touch a drop, I&#x2019;m going to <wbr class="w480 w960"></wbr>barf.&#x201D; Annie dropped her voice to a <wbr class="w481 w961 w1799"></wbr>conspiratorial level. <wbr class="w480 w960"></wbr>&#x201C;And am I the <wbr class="w1800"></wbr>only one who noticed this guy&#x2019;s accent is total <wbr class="w480 w960"></wbr>bullshit?&#x201D;</span></p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">K</span>arl looked perplexed and glanced at their guide. &#x201C;I hadn&#x2019;t <wbr class="w480 w960"></wbr>noticed.&#x201D;</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">&#x201C;Whatever. Can we go?&#x201D;</span></p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">K</span>arl gave her a patronizing but relenting look. &#x201C;Okay. Let&#x2019;s <wbr class="w480 w960"></wbr>go back to the hotel.&#x201D;</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">&#x201C;Do it quietly, so Mr. Grappa doesn&#x2019;t notice.&#x201D;</span></p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">&#x201C;What?&#x201D;</span></p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">&#x201C;Forget it.&#x201D;</span></p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">T</span>he two of them snuck away from the tour group, then over <wbr class="w480 w960"></wbr>to the next row of <wbr class="w481 w961"></wbr>grapevines. <wbr class="w1799"></wbr>There was a clear path back <wbr class="w480 w960"></wbr>to <wbr class="w1800"></wbr>the visitor&#x2019;s center, and Annie could see a <wbr class="w481 w961"></wbr>gathering of a <wbr class="w480 w960"></wbr>dozen <wbr class="w1799"></wbr>or so people on the granite patio there, highlighted by <wbr class="w480 w960"></wbr>the <wbr class="w1800"></wbr>flickering <wbr class="w481 w961"></wbr>flames of a large fire in a <wbr class="w1799"></wbr>fire pit and the <wbr class="w480 w960"></wbr>orange-red hues of evening sunlight.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="c95f3c32-25ef-4f13-a0b7-5a2f48db817a" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a"><div kind="group" index="column" class="group column group column" id="u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-c95f3c32-25ef-4f13-a0b7-5a2f48db817a-g-column-t-paragraph"><p><span class="first-letter">&#x201C;Lovely,&#x201D; Annie said, &#x201C;now we have to sneak back through a <wbr class="w480 w960"></wbr>party.&#x201D;</span></p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">&#x201C;Quit being so paranoid, no one cares if we leave.&#x201D;</span></p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">&#x201C;But look, they&#x2019;re all dressed up, it&#x2019;s some kind of formal <wbr class="w480 w960"></wbr>thing.&#x201D;</span></p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">K</span>arl sighed. &#x201C;Just come on, Ann.&#x201D;</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">H</span>e pulled her along the row of grapevines. As they <wbr class="w480 w960"></wbr>approached the visitor&#x2019;s center, her <wbr class="w481 w961"></wbr>eyes <wbr class="w1799"></wbr>rested on the <wbr class="w480 w960"></wbr>people there, all of <wbr class="w1800"></wbr>them dressed in their finest evening <wbr class="w480 w960"></wbr>wear, the men <wbr class="w481 w961"></wbr>in <wbr class="w1799"></wbr>tuxedos, the women in gowns. What was <wbr class="w480 w960"></wbr>this? </p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">A</span>s they drew closer, all eyes turned and looked at them.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><i data-grid-id="e9e3dba1-32c0-4783-9a9f-dcbdd54ed379">Bruxism. Migraine. Period. Fight. Scrutiny. </i>The words, and her <wbr class="w480 w960"></wbr>head, throbbed even harder.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">A</span> man broke off the group and walked to the edge of the <wbr class="w480 w960"></wbr>patio. His grin beneath a neat <wbr class="w481 w961"></wbr>pencil <wbr class="w1799"></wbr>mustache was almost a <wbr class="w480 w960"></wbr>rictus. <wbr class="w1800"></wbr>His black hair was combed into an oily slick. It has to <wbr class="w480 w481 w960 w961"></wbr>be <wbr class="w1799"></wbr>Brylcreem, Annie thought. Do they still make Brylcreem?</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">&#x201C;Welcome, friends,&#x201D;</span> the man said.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="7844732a-4216-4f97-ade0-143abc6bb427" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-7844732a-4216-4f97-ade0-143abc6bb427"><div kind="group" index="column" class="group column group column" id="u-7844732a-4216-4f97-ade0-143abc6bb427-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-7844732a-4216-4f97-ade0-143abc6bb427-g-column-t-paragraph"><p><span class="first-letter">&#x201C;We were just leaving,&#x201D;</span> Karl said, a thick waver in his voice.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">T</span>he man cocked his head quizzically to one side. &#x201C;You&#x2019;re not <wbr class="w480 w960"></wbr>here for the tasting?&#x201D;</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">&#x201C;No. My--my wife is ill. We&#x2019;ll have to come back tomorrow <wbr class="w480 w960"></wbr>evening.&#x201D;</span></p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">T</span>he man stared at them--everyone stared at them--and his <wbr class="w480 w960"></wbr>grin faltered a bit. His terrible <wbr class="w481 w961"></wbr>grin. <wbr class="w1799"></wbr>His black eyes slipped <wbr class="w480 w960"></wbr>behind <wbr class="w1800"></wbr>them for a moment. Annie glanced back and saw <wbr class="w480 w960"></wbr>that <wbr class="w481 w961"></wbr>their tour <wbr class="w1799"></wbr>group, including Mr. Grappa, had followed <wbr class="w480 w960"></wbr>them up here <wbr class="w1800"></wbr>and was standing as <wbr class="w481 w961"></wbr>silently as the <wbr class="w1799"></wbr>others.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">&#x201C;We&#x2019;re sorry to interrupt your party,&#x201D; Annie said, &#x201C;but may <wbr class="w480 w960"></wbr>we get by?&#x201D; Her eyes settled on <wbr class="w481 w961"></wbr>the <wbr class="w1799"></wbr>double doors leading <wbr class="w480 w960"></wbr>through <wbr class="w1800"></wbr>the visitor&#x2019;</span>s center, to the parking lot beyond, and <wbr class="w480 w960"></wbr>away <wbr class="w481 w961"></wbr>from <wbr class="w1799"></wbr>this awkwardness.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="b25460aa-ca48-4dca-8e6c-dbe793134d44" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-b25460aa-ca48-4dca-8e6c-dbe793134d44"><div kind="group" index="column" class="group column group column" id="u-b25460aa-ca48-4dca-8e6c-dbe793134d44-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-b25460aa-ca48-4dca-8e6c-dbe793134d44-g-column-t-paragraph"><p><span class="first-letter">M</span>r. Brylcreem stepped aside to let them pass. She and Karl <wbr class="w480 w960"></wbr>stepped onto the patio, but <wbr class="w481 w961"></wbr>after a <wbr class="w1799"></wbr>moment, she felt <wbr class="w480 w960"></wbr>Brylcreem&#x2019;s <wbr class="w1800"></wbr>grip on her shoulder. She barely noticed Karl&#x2019;s <wbr class="w480 w960"></wbr>hand <wbr class="w481 w961"></wbr>slipping <wbr class="w1799"></wbr>from her own. She turned into Brylcreem&#x2019;s <wbr class="w480 w960"></wbr>piercing black gaze.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">&#x201C;This tasting is for you,&#x201D;</span> he said.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">H</span>e gestured slightly with his head, and Annie saw a large <wbr class="w480 w960"></wbr>cart being wheeled out by two <wbr class="w481 w961"></wbr>men <wbr class="w1799"></wbr>in chef&#x2019;s jackets. Her <wbr class="w480 w960"></wbr>breath <wbr class="w1800"></wbr>hitched violently. The cart held the most exquisite ice <wbr class="w480 w481 w960 w961"></wbr>sculpture <wbr class="w1799"></wbr>she had ever seen. The detail was perfect, the <wbr class="w480"></wbr>nude <wbr class="w960"></wbr>female <wbr class="w1800"></wbr>figure carved in <wbr class="w481 w961"></wbr>smooth, crystal-<wbr class="w1799"></wbr>clear ice, <wbr class="w480"></wbr>standing <wbr class="w960"></wbr>daintily on its toes, arms down, palms turned <wbr class="w480"></wbr>forward, <wbr class="w481 w961"></wbr>head <wbr class="w960"></wbr>turned to <wbr class="w1800"></wbr>one <wbr class="w1799"></wbr>side. The tranquil face was <wbr class="w480"></wbr>familiar and <wbr class="w960"></wbr>unmistakable. It was her face. <wbr class="w481 w961"></wbr>It was Annie&#x2019;s <wbr class="w480"></wbr>face.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">T</span>he men stopped the cart in the middle of the patio as the <wbr class="w480 w960"></wbr>group around her gasped in <wbr class="w481 w961 w1799"></wbr>appreciation of the sculpture.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">&#x201C;Oh god,&#x201D; Annie whispered. &#x201C;Karl?&#x201D;</span></p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i last_chapter w_paragraph w_text w_long_paragraph w_long_text stack column" itemid="9d90a045-e05e-4c61-a911-2d288f282e3d" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-9d90a045-e05e-4c61-a911-2d288f282e3d"><div kind="group" index="column" class="group column group column" id="u-9d90a045-e05e-4c61-a911-2d288f282e3d-g-column"><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-9d90a045-e05e-4c61-a911-2d288f282e3d-g-column-t-paragraph"><p><span class="first-letter">S</span>he glanced around in a panic. Karl was gone and she felt <wbr class="w480 w960"></wbr>her last defense crumble.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">O</span>ne of the men in white picked up a crystal decanter filled <wbr class="w480 w960"></wbr>with translucent pink liquid. He <wbr class="w481 w961 w1799"></wbr>held it up to the back of the <wbr class="w480 w960 w1800"></wbr>sculpture&#x2019;s head and poured. The liquid drifted down, <wbr class="w480 w481 w960 w961 w1799"></wbr>highlighting the exceptionally detailed system of veins inside <wbr class="w480 w960"></wbr>the <wbr class="w1800"></wbr>thing.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">&#x201C;It&#x2019;s--it&#x2019;s me? How?&#x201D;</span> Annie said, and Mr. Brylcreem only <wbr class="w480 w960"></wbr>smiled wider.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">T</span>he pink liquid filled the sculpture&#x2019;s veins from head to toe. <wbr class="w480 w960"></wbr>To Annie&#x2019;s horror, some of <wbr class="w481 w961"></wbr>the <wbr class="w1799"></wbr>liquid dripped from between <wbr class="w480 w960"></wbr>the <wbr class="w1800"></wbr>sculpture&#x2019;s legs, running in rivulets down the inner <wbr class="w480 w481 w960 w961"></wbr>thighs <wbr class="w1799"></wbr>into a crystal bowl at the sculpture&#x2019;s feet.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">&#x201C;What is this?&#x201D; Annie asked. &#x201C;Where&#x2019;s my husband?&#x201D;</span></p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">B</span>rylcreem&#x2019;s grip tightened on her shoulder, and he said, &#x201C;Let <wbr class="w480 w960"></wbr>the tasting begin.&#x201D;</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">T</span>he congregation closed in.</p></div></div></article><article subject="panel" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_center uninverted vertical collapsed full line_padding_aside_inside text_width_full group_h_align_none text_align_center flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_small panel stack heading i first_panel last_panel w_headline w_title w_decoration w_short_headline w_short_title stack heading" itemid="u-page-alternate" itemtype="alternate" diff_index="2" index="heading" kind="stack" score="1.875" missed="0.125" tag="article" id="u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate"><div kind="group" index="heading" class="group heading group heading" id="u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate-g-heading"><h1 kind="title" index="headline" class="short short_headline short_title title headline vfld-leader vfld-trailer title headline" specificity="0.25" itemprop="title" id="u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate-g-heading-t-headline"><a class="text-decoration" href="../rss.xml" id="u-284aa817-9ccf-4f40-9870-f2322246dde9-alternate-g-heading-t-headline-a">Geoffrey K. Liu, Author feed</a></h1></div></article><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title w_list w_data w_short_list w_short_data layout one" id="u-284aa817-9ccf-4f40-9870-f2322246dde9-desktop-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-284aa817-9ccf-4f40-9870-f2322246dde9-desktop-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="article" diff_index="0" index="one" class="layout one i w_headline w_title w_paragraph w_text w_separator w_decoration w_leader w_short_headline w_short_title w_long_paragraph w_long_text layout one" id="u-284aa817-9ccf-4f40-9870-f2322246dde9-desktop-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_texts colors-use-same-as-previous layout one i first_layout last_layout article layout one" id="u-284aa817-9ccf-4f40-9870-f2322246dde9-desktop-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-284aa817-9ccf-4f40-9870-f2322246dde9-desktop-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-284aa817-9ccf-4f40-9870-f2322246dde9-desktop-l-one-3-l-one"></div><style id="u-284aa817-9ccf-4f40-9870-f2322246dde9-color">body{background-color: rgba(29, 32, 30, 1)}</style></section><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title w_list w_data w_short_list w_short_data layout one" id="u-284aa817-9ccf-4f40-9870-f2322246dde9-cinema-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-284aa817-9ccf-4f40-9870-f2322246dde9-cinema-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="article" diff_index="0" index="one" class="layout one i w_headline w_title w_paragraph w_text w_separator w_decoration w_leader w_short_headline w_short_title w_long_paragraph w_long_text layout one" id="u-284aa817-9ccf-4f40-9870-f2322246dde9-cinema-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_texts colors-use-same-as-previous layout one i first_layout last_layout article layout one" id="u-284aa817-9ccf-4f40-9870-f2322246dde9-cinema-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-284aa817-9ccf-4f40-9870-f2322246dde9-cinema-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-284aa817-9ccf-4f40-9870-f2322246dde9-cinema-l-one-3-l-one"></div><style id="u-284aa817-9ccf-4f40-9870-f2322246dde9-color">body{background-color: rgba(29, 32, 30, 1)}</style></section></div><script href="./client.js">(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 /*! Hammer.JS - v1.1.3 - 2014-05-20
  * http://eightmedia.github.io/hammer.js
  *
@@ -2013,7 +2075,7 @@ module.exports = function() {
 
 
 },{}],5:[function(require,module,exports){
-var cache, fade, frames, hiding, highlighting, showing;
+var Hide, Show, cache, fade, frames, hiding, highlighting, showing;
 
 highlighting = showing = hiding = null;
 
@@ -2040,40 +2102,69 @@ fade = function(element, to, from) {
   return frames[element.id] = requestAnimationFrame(Frame);
 };
 
+document.body.addEventListener('mousemove', function(e) {});
+
+Hide = function(target) {
+  clearTimeout(showing);
+  setTimeout(function() {
+    if (hiding !== target) {
+      hiding.style.backgroundImage = cache[hiding.id];
+      return delete cache[hiding.id];
+    }
+  }, 300);
+  hiding = highlighting;
+  highlighting = null;
+  return fade(hiding.getElementsByTagName('img')[0], 1);
+};
+
+Show = function(target, x, y, img) {
+  var colors, value;
+  if (target !== highlighting) {
+    clearTimeout(showing);
+    showing = setTimeout(function() {
+      if (highlighting === target) {
+        return fade(img, 0.8);
+      }
+    }, 150);
+  }
+  if ((value = cache[target.id]) == null) {
+    cache[target.id] = value = window.getComputedStyle(target)['background-image'];
+  }
+  if (value.indexOf('linear-gradient') > -1) {
+    colors = value.match(/rgba?\((.*?)\)|black|white|transparent/g);
+    if (colors[1].indexOf('rgba') > -1) {
+      colors[1] = colors[1].replace(/,\s*[\d\.]+\)/, ', 0.7)');
+    } else {
+      colors[1] = colors[1].replace('rgb', 'rgba').replace(/\)/, ', 0.7)');
+    }
+    value = 'radial-gradient(circle at ' + x + 'px ' + y + 'px, rgba(255,255,255,0.5) -10%, ' + colors[1] + ' 25%, ' + colors[0] + ' 90%)';
+  } else {
+    return;
+  }
+  target.style.backgroundImage = value;
+  return highlighting = target;
+};
+
+document.body.addEventListener('click', function(e) {
+  if (highlighting) {
+    return Hide(highlighting);
+  }
+});
+
 document.body.addEventListener('mousemove', function(e) {
-  var clientX, clientY, colors, img, parent, ref, target, value;
+  var clientX, clientY, img, parent, ref, target;
   target = e.target;
   while (target) {
-    if (target.tagName === 'A' && target.classList.contains('media')) {
+    if (target.tagName === 'A' && target.classList.contains('media') && !target.classList.contains('revealed')) {
       break;
     }
     target = target.parentNode;
   }
   if (highlighting && highlighting !== target) {
-    clearTimeout(showing);
-    setTimeout(function() {
-      if (hiding !== target) {
-        hiding.style.backgroundImage = cache[hiding.id];
-        return delete cache[hiding.id];
-      }
-    }, 300);
-    hiding = highlighting;
-    highlighting = null;
-    fade(hiding.getElementsByTagName('img')[0], 1);
+    Hide(highlighting);
   }
   if (target) {
     if ((ref = (img = target.getElementsByTagName('img')[0])) != null ? ref.complete : void 0) {
-      if (target !== highlighting) {
-        clearTimeout(showing);
-        showing = setTimeout(function() {
-          if (highlighting === target) {
-            return fade(img, 0.8);
-          }
-        }, 150);
-      }
-      if ((value = cache[target.id]) == null) {
-        cache[target.id] = value = window.getComputedStyle(target)['background-image'];
-      }
       clientX = e.pageX;
       clientY = e.pageY;
       parent = target;
@@ -2082,19 +2173,7 @@ document.body.addEventListener('mousemove', function(e) {
         clientY -= parent.offsetTop;
         parent = parent.offsetParent;
       }
-      if (value.indexOf('linear-gradient') > -1) {
-        colors = value.match(/rgba?\((.*?)\)|black|white|transparent/g);
-        if (colors[1].indexOf('rgba') > -1) {
-          colors[1] = colors[1].replace(/,\s*[\d\.]+\)/, ', 0.7)');
-        } else {
-          colors[1] = colors[1].replace('rgb', 'rgba').replace(/\)/, ', 0.7)');
-        }
-        value = 'radial-gradient(circle at ' + clientX + 'px ' + clientY + 'px, rgba(255,255,255,0.5) -10%, ' + colors[1] + ' 25%, ' + colors[0] + ' 90%)';
-      } else {
-        return;
-      }
-      target.style.backgroundImage = value;
-      return highlighting = target;
+      return Show(target, clientX, clientY, img);
     }
   }
 });
@@ -2242,11 +2321,13 @@ module.exports = function() {
 
 
 },{"./reflow":9}],8:[function(require,module,exports){
-var Player, Youtube, iframe, revealed, rgb2hex;
+var Player, Youtube, iframe, reflow, revealed, rgb2hex;
 
 iframe = null;
 
 Youtube = null;
+
+reflow = require('./reflow');
 
 Player = function(id, src, width, height, color, bg) {
   if (src.indexOf('youtube') > -1) {
@@ -2255,6 +2336,8 @@ Player = function(id, src, width, height, color, bg) {
   src = src.replace('COLOR', color).replace('BG', bg);
   if (location.protocol !== 'https:') {
     src = src.replace('https:', 'http:');
+  } else {
+    src = src.replace('http:', 'https:');
   }
   iframe = document.createElement('iframe');
   iframe.id = id;
@@ -2267,79 +2350,294 @@ Player = function(id, src, width, height, color, bg) {
   iframe.style.left = 0;
   iframe.style.right = 0;
   iframe.style.position = 'absolute';
-  iframe.style.opacity = 0.2;
+  iframe.style.opacity = 0;
   iframe.onload = function() {
-    return iframe.style.opacity = 1;
+    return iframe.showing = setTimeout(function() {
+      iframe.classList.add('loaded');
+      iframe.style.display = '';
+      iframe.showing = setTimeout(function() {
+        iframe.style.opacity = 1;
+        return iframe.showing = setTimeout(function() {
+          return typeof iframe.onloaded === "function" ? iframe.onloaded(true) : void 0;
+        }, 500);
+      }, 1);
+      return typeof iframe.onloaded === "function" ? iframe.onloaded() : void 0;
+    }, 300);
   };
   return iframe;
 };
 
 revealed = null;
 
-Player.reveal = function(iframe) {
-  var diff, i, left, len, parent, play, ref, ref1, sibling, target, top, translateX, translateY;
-  while (target = (target || iframe).parentNode) {
-    if ((ref = target.classList) != null ? ref.contains('media') : void 0) {
-      if (target.parentNode.classList.contains('group')) {
-        parent = target.parentNode;
-      } else {
-        parent = target;
+Player.findMedia = function(iframe) {
+  var i, len, media, ref, ref1, ref2, sibling;
+  if (iframe.parentNode) {
+    ref = iframe.parentNode.childNodes;
+    for (i = 0, len = ref.length; i < len; i++) {
+      sibling = ref[i];
+      if ((ref1 = sibling.classList) != null ? ref1.contains('media') : void 0) {
+        return sibling;
       }
-      revealed = iframe;
-      play = parent.getElementsByClassName('play')[0];
-      left = target.offsetWidth - play.offsetLeft - play.offsetWidth;
-      top = -play.offsetTop;
-      play.style.webkitTransformOrigin = 'top right';
-      play.style.webkitTransform = 'translateX(' + left + 'px) translateY(' + top + 'px) scale(0.5)';
-      target.classList.add('revealed');
-      ref1 = parent.parentNode.childNodes;
-      for (i = 0, len = ref1.length; i < len; i++) {
-        sibling = ref1[i];
-        if (sibling.nodeType === 1 && sibling !== parent) {
-          translateX = translateY = null;
-          if ((diff = sibling.offsetLeft + sibling.offsetWidth - parent.offsetLeft) > 2 && parent.offsetLeft >= sibling.offsetLeft) {
-            translateX = -diff;
-          }
-          if ((diff = target.offsetLeft + target.offsetWidth - sibling.offsetLeft) > 2 && parent.offsetLeft <= sibling.offsetLeft) {
-            if (!translateX || Math.abs(diff) < Math.abs(translateX)) {
-              translateX = diff;
-            }
-          }
-          if ((diff = sibling.offsetTop + sibling.offsetHeight - parent.offsetTop) > 2 && parent.offsetTop >= sibling.offsetTop) {
-            translateY = -diff;
-          }
-          if ((diff = target.offsetTop + target.offsetHeight - sibling.offsetTop) > 2 && parent.offsetTop <= sibling.offsetTop) {
-            if (!translateY || Math.abs(diff) < Math.abs(translateY)) {
-              translateY = diff;
-            }
-          }
-          if (Math.abs(translateX) > Math.abs(translateY)) {
-            sibling.style.webkitTransform = 'translateY(' + translateY + 'px)';
-          } else {
-            sibling.style.webkitTransform = 'translateX(' + translateX + 'px)';
-          }
-          console.log(translateX, translateY, sibling);
-        }
+    }
+    while (media = (media || iframe).parentNode) {
+      if ((ref2 = media.classList) != null ? ref2.contains('media') : void 0) {
+        return media;
       }
     }
   }
 };
 
+Player.getClipRect = function(img, media) {
+  var rect;
+  rect = {};
+  rect.left = -img.offsetLeft;
+  rect.right = -img.offsetLeft + img.parentNode.offsetWidth;
+  rect.top = -img.offsetTop;
+  rect.bottom = img.offsetTop + img.parentNode.offsetHeight;
+  return rect;
+};
+
+Player.rect = function(rect) {
+  return 'rect(' + rect.top + 'px,' + rect.right + 'px,' + rect.bottom + 'px,' + rect.left + 'px)';
+};
+
+Player.set = function(element, property, value) {
+  var webkit;
+  webkit = 'webkit' + property.charAt(0).toUpperCase() + property.substring(1);
+  if (element.style[webkit] != null) {
+    return element.style[webkit] = value;
+  } else {
+    return element.style[property] = value;
+  }
+};
+
+Player.reveal = function(iframe, instant) {
+  var firstTime, img, layout, left, media, offsetLeft, offsetTop, parent, play, ratio, rectLeft, rectRight, ref, root, shiftLeft, stack, targetHeight, targetWidth, top, translateX, translateY, zoom;
+  iframe.style.maxHeight = window.innerHeight + 'px';
+  if (media = Player.findMedia(iframe)) {
+    if ((ref = media.classList) != null ? ref.contains('media') : void 0) {
+      root = stack = media;
+      while (root = root.parentNode) {
+        if (root.classList.contains('stack')) {
+          stack = root;
+        }
+        if (root.classList.contains('layout-system')) {
+          break;
+        }
+      }
+      layout = reflow.getLayout(root, stack);
+      console.log('get layout', root, stack, layout);
+      img = media.querySelector('picture, img');
+      offsetLeft = media.offsetLeft;
+      offsetTop = media.offsetTop;
+      if (media.parentNode.classList.contains('group')) {
+        parent = media.parentNode;
+        offsetLeft += parent.offsetLeft;
+        offsetTop += parent.offsetTop;
+      } else {
+        parent = media;
+      }
+      revealed = iframe;
+      play = parent.getElementsByClassName('play')[0];
+      Player.set(play, 'transformOrigin', 'top right');
+      if (!media.classList.contains('revealed')) {
+        firstTime = true;
+        media.classList.add('revealed');
+      }
+      if (layout && (layout.offsetWidth > media.offsetWidth * 2.5 || media.offsetWidth < 350 || media.offsetHeight < 200) && iframe.src.indexOf('soundcloud') === -1) {
+        if (firstTime) {
+          Player.set(img, 'transition', 'none');
+          img.style.clip = Player.rect(Player.getClipRect(img));
+          return requestAnimationFrame(function() {
+            Player.set(img, 'transition', '');
+            return requestAnimationFrame(function() {
+              return Player.reveal(iframe);
+            });
+          });
+        }
+        iframe.style.zIndex = 6;
+        media.classList.add('expanded');
+        translateX = -offsetLeft - stack.offsetLeft;
+        translateY = -offsetTop - stack.offsetTop;
+        if (stack.parentNode !== layout) {
+          translateX += layout.offsetLeft + layout.parentNode.offsetLeft;
+          translateY += layout.offsetTop + layout.parentNode.offsetTop;
+        }
+        Player.set(img, 'transform', img.style.transform = 'translateX(' + (translateX - img.offsetLeft) + 'px) ' + 'translateY(' + (translateY - img.offsetTop) + 'px) ');
+        if (img) {
+          Player.set(media, 'transformOrigin', 'top left');
+          Player.set(img, 'transformOrigin', 'top left');
+          ratio = img.offsetWidth / img.offsetHeight;
+          targetHeight = Math.min(layout.offsetHeight, window.innerHeight);
+          targetWidth = ratio * targetHeight;
+          console.log(layout, layout.offsetHeight, targetHeight, 44444);
+          iframe.style.left = translateX + media.offsetLeft + 'px';
+          iframe.style.top = translateY + media.offsetTop + 'px';
+          iframe.style.width = layout.offsetWidth + 'px';
+          iframe.style.height = layout.offsetHeight + 'px';
+          zoom = targetHeight / img.offsetHeight;
+          shiftLeft = (layout.offsetWidth - targetWidth) / 2;
+          rectLeft = rectRight = Math.max(0, -shiftLeft / zoom);
+          if (media.style.overflow !== 'visible') {
+            requestAnimationFrame(function() {
+              media.style.overflow = 'visible';
+              stack.style.overflow = 'visible';
+              img.style.clip = Player.rect(Player.getClipRect(img));
+              return requestAnimationFrame(function() {
+                return img.style.clip = 'rect(0px, ' + (img.offsetWidth - rectRight) + 'px, ' + img.offsetHeight + 'px, ' + rectLeft + 'px)';
+              });
+            });
+          } else {
+            img.style.clip = 'rect(0px, ' + (img.offsetWidth - rectRight) + 'px, ' + img.offsetHeight + 'px, ' + rectLeft + 'px)';
+          }
+          if (img.style.webkitTransform) {
+            img.style.webkitTransform += ' translateX(' + shiftLeft + 'px)  scale(' + zoom.toFixed(3) + ') ';
+          } else if (img.style.transform) {
+            img.style.transform += ' translateX(' + shiftLeft + 'px)  scale(' + zoom.toFixed(3) + ') ';
+          }
+          left = translateX + layout.offsetWidth - play.offsetLeft - play.offsetWidth;
+          top = translateY - play.offsetTop;
+          Player.set(play, 'transform', 'translateX(' + (left - 10) + 'px) ' + 'translateY(' + (top + 10) + 'px) ' + 'scale(0.5)');
+        }
+        stack.style.zIndex = 10;
+        if (iframe.style.opacity === 1) {
+          Player.fade(parent, true, media);
+        } else {
+          iframe.onloaded = function(full) {
+            return Player.fade(parent, full, media);
+          };
+        }
+      } else {
+        media.classList.remove('expanded');
+        left = media.offsetWidth - play.offsetLeft - play.offsetWidth;
+        top = -play.offsetTop;
+        Player.set(play, 'transform', 'translateX(' + (left - 5) + 'px) translateY(' + (top + 5) + 'px) scale(0.5)');
+        iframe.style.left = media.offsetLeft + 'px';
+        iframe.style.top = media.offsetTop + 'px';
+        iframe.style.width = media.offsetWidth + 'px';
+        iframe.style.height = media.offsetHeight + 'px';
+        if (iframe.style.opacity === 1) {
+          img.style.opacity = 0;
+        } else {
+          iframe.onloaded = function(full) {
+            console.error('ONLOADED', full);
+            if (full) {
+              return img.style.opacity = 0;
+            } else {
+              return img.style.opacity = 0.8;
+            }
+          };
+        }
+        Player.expose(parent);
+      }
+    }
+  }
+};
+
+Player.fade = function(parent, full, media) {
+  var i, len, ref, results, sibling;
+  if (media) {
+    sibling = media.querySelector('picture, img');
+    if (full) {
+      sibling.style.opacity = 0;
+    }
+  }
+  ref = parent.parentNode.childNodes;
+  results = [];
+  for (i = 0, len = ref.length; i < len; i++) {
+    sibling = ref[i];
+    if (sibling.nodeType === 1 && sibling !== parent && sibling.tagName !== 'IFRAME' && !sibling.classList.contains('play')) {
+      if (full) {
+        results.push(sibling.style.opacity = 0);
+      } else {
+        results.push(sibling.style.opacity = 0.8);
+      }
+    } else {
+      results.push(void 0);
+    }
+  }
+  return results;
+};
+
+Player.expose = function(parent) {
+  var diff, i, len, ref, results, sibling, translateX, translateY;
+  ref = parent.parentNode.childNodes;
+  results = [];
+  for (i = 0, len = ref.length; i < len; i++) {
+    sibling = ref[i];
+    if (sibling.nodeType === 1 && sibling !== parent && sibling.tagName !== 'IFRAME') {
+      translateX = translateY = null;
+      if ((diff = sibling.offsetLeft + sibling.offsetWidth - parent.offsetLeft) > 2 && parent.offsetLeft >= sibling.offsetLeft) {
+        translateX = -diff - 2;
+      }
+      if ((diff = parent.offsetLeft + parent.offsetWidth - sibling.offsetLeft) > 2 && parent.offsetLeft <= sibling.offsetLeft) {
+        if (!translateX || Math.abs(diff) < Math.abs(translateX)) {
+          translateX = diff + 2;
+        }
+      }
+      if ((diff = sibling.offsetTop + sibling.offsetHeight - parent.offsetTop) > 2 && parent.offsetTop >= sibling.offsetTop) {
+        translateY = -diff - 2;
+      }
+      if ((diff = parent.offsetTop + parent.offsetHeight - sibling.offsetTop) > 2 && parent.offsetTop <= sibling.offsetTop) {
+        if (!translateY || Math.abs(diff) < Math.abs(translateY)) {
+          translateY = diff + 2;
+        }
+      }
+      if (Math.abs(translateX) > Math.abs(translateY)) {
+        results.push(Player.set(sibling, 'transform', 'translateY(' + translateY + 'px)'));
+      } else {
+        results.push(Player.set(sibling, 'transform', 'translateX(' + translateX + 'px)'));
+      }
+    } else {
+      results.push(void 0);
+    }
+  }
+  return results;
+};
+
 Player.hide = function(iframe) {
-  var i, len, parent, play, ref, ref1, sibling;
-  while (parent = (parent || iframe).parentNode) {
-    if ((ref = parent.classList) != null ? ref.contains('revealed') : void 0) {
-      parent.classList.remove('revealed');
+  var child, i, img, j, len, len1, media, parent, play, ref, ref1, ref2, ref3, sibling;
+  if (media = Player.findMedia(iframe)) {
+    if ((ref = media.classList) != null ? ref.contains('revealed') : void 0) {
+      media.classList.remove('revealed');
+      media.classList.remove('expanded');
+      Player.set(media, 'transform', '');
+      if (img = media.querySelector('picture, img')) {
+        img.style.zIndex = '';
+        img.style.opacity = '';
+        if (media.style.overflow === 'visible') {
+          img.style.clip = Player.rect(Player.getClipRect(img));
+          setTimeout(function() {
+            img.style.clip = '';
+            return media.style.overflow = '';
+          }, 300);
+        }
+      }
+      ref1 = media.childNodes;
+      for (i = 0, len = ref1.length; i < len; i++) {
+        child = ref1[i];
+        Player.set(child, 'transform', '');
+      }
+      parent = media;
       if (parent.parentNode.classList.contains('group')) {
         parent = parent.parentNode;
       }
       play = parent.getElementsByClassName('play')[0];
-      play.style.webkitTransform = '';
-      ref1 = parent.parentNode.childNodes;
-      for (i = 0, len = ref1.length; i < len; i++) {
-        sibling = ref1[i];
-        sibling.style.webkitTransform = '';
+      play.style.zIndex = '';
+      Player.set(play, 'transform', '');
+      ref2 = parent.parentNode.childNodes;
+      for (j = 0, len1 = ref2.length; j < len1; j++) {
+        sibling = ref2[j];
+        if (sibling.nodeType === 1 && sibling !== iframe) {
+          Player.set(sibling, 'transform', '');
+          sibling.style.opacity = '';
+        }
       }
+      if (!((ref3 = (parent = parent.parentNode).classList) != null ? ref3.contains('stack') : void 0)) {
+        parent = parent.parentNode;
+      }
+      parent.style.zIndex = '';
+      parent.style.visible = '';
     }
   }
   return revealed = null;
@@ -2363,29 +2661,32 @@ Player.stop = function(iframe) {
   var old;
   old = iframe;
   iframe.style.opacity = 0;
+  iframe.style.width = iframe.offsetWidth + 'px';
+  iframe.style.height = iframe.offsetHeight + 'px';
   setTimeout(function() {
     var ref;
     return (ref = old.parentNode) != null ? ref.removeChild(old) : void 0;
   }, 300);
+  clearTimeout(iframe.showing);
   Player.hide(iframe);
   return iframe = null;
 };
 
 document.addEventListener('click', function(e) {
-  var bg, color, header, parent, play, ref, ref1, results, styles, target;
-  target = e.target;
+  var bg, color, header, media, parent, play, ref, ref1, results, styles;
+  media = e.target;
   results = [];
-  while (target) {
-    if ((ref = target.classList) != null ? ref.contains('media') : void 0) {
-      if (play = target.getElementsByClassName('play')[0]) {
-        if ((iframe != null ? iframe.parentNode : void 0) === target) {
+  while (media) {
+    if ((ref = media.classList) != null ? ref.contains('media') : void 0) {
+      if (play = media.getElementsByClassName('play')[0]) {
+        if ((iframe != null ? iframe.parentNode : void 0) === media || (iframe != null ? iframe.parentNode : void 0) === media.parentNode) {
           Player.stop(iframe);
         } else {
           if (iframe) {
             Player.stop(iframe);
           }
           color = bg = null;
-          header = (ref1 = target.parentNode.parentNode.getElementsByClassName('title')[0]) != null ? ref1.firstChild : void 0;
+          header = (ref1 = media.parentNode.parentNode.getElementsByClassName('title')[0]) != null ? ref1.firstChild : void 0;
           parent = header || play;
           while (parent) {
             if (parent.nodeType === 1) {
@@ -2404,14 +2705,14 @@ document.addEventListener('click', function(e) {
             parent = parent.parentNode;
           }
           iframe = Player(play.id + '-player', play.getAttribute('data-src'), play.getAttribute('data-width'), play.getAttribute('data-height'), rgb2hex(color), rgb2hex(bg));
-          target.appendChild(iframe);
+          media.parentNode.insertBefore(iframe, media);
           Player.reveal(iframe);
         }
         e.preventDefault();
         break;
       }
     }
-    results.push(target = target.parentNode);
+    results.push(media = media.parentNode);
   }
   return results;
 });
@@ -2426,7 +2727,7 @@ rgb2hex = function(rgb) {
 window.exports = window.Player = Player;
 
 
-},{}],9:[function(require,module,exports){
+},{"./reflow":9}],9:[function(require,module,exports){
 module.exports = {
   reflow: function(container) {
     var counter, heights, hidden, hole, holed, holes, i, id, ids, index, j, k, l, last, layout, layouts, len, len1, len2, len3, m, mutations, name, node, ref, ref1, ref2, stack, stacks;
