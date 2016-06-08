@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[Geoffrey K. Liu, Author]]></title>
+        <description><![CDATA[Geoffrey K. Liu, Author]]></description>
+        <link>http://github.com/dylang/node-rss</link>
+        <generator>The Grid</generator>
+        <lastBuildDate>Wed, 08 Jun 2016 16:03:11 GMT</lastBuildDate>
+        <atom:link href="undefinedrss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[<p>Happy 6/8</p>]]></description>
+            <link>undefinedhappy-68/index.html</link>
+            <guid isPermaLink="false">e387c5f4-7237-459e-bcaf-e7c5f60a0d75</guid>
+            <pubDate>Wed, 08 Jun 2016 16:03:10 GMT</pubDate>
+        </item>
+    </channel>
+</rss>
