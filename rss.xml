@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[Geoffrey K. Liu, Author]]></title>
+        <description><![CDATA[Geoffrey K. Liu, Author]]></description>
+        <link>http://github.com/dylang/node-rss</link>
+        <generator>The Grid</generator>
+        <lastBuildDate>Sun, 19 Jun 2016 17:34:34 GMT</lastBuildDate>
+        <atom:link href="undefinedrss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[<p>Time to kick depression in the ass and start writing again...</p>]]></description>
+            <link>undefinedtime-to-kick-depression-in-the-ass-and-start-writing-again/index.html</link>
+            <guid isPermaLink="false">633fd170-0ec4-46ce-a52e-c3bd9b908732</guid>
+            <pubDate>Sun, 19 Jun 2016 17:34:33 GMT</pubDate>
+        </item>
+    </channel>
+</rss>
