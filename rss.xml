@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[Geoffrey K. Liu, Author]]></title>
+        <description><![CDATA[Geoffrey K. Liu, Author]]></description>
+        <link>http://github.com/dylang/node-rss</link>
+        <generator>The Grid</generator>
+        <lastBuildDate>Thu, 21 Jul 2016 18:10:55 GMT</lastBuildDate>
+        <atom:link href="undefinedrss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[<p>Deep in a tomb, a baby cried, was it just born, or has it just died?</p>]]></description>
+            <link>undefineddeep-in-a-tomb-a-baby-cried-was-it-just-born-or-has-it-ju/index.html</link>
+            <guid isPermaLink="false">623be265-b6af-4ad6-9665-2c521db5ea7d</guid>
+            <pubDate>Thu, 21 Jul 2016 18:10:54 GMT</pubDate>
+        </item>
+    </channel>
+</rss>
