@@ -1,4 +1,4 @@
-name: 'Geoffrey K. Liu, Guy That Writes Shit'
+name: 'Geoffrey K. Liu, Author'
 favicon: null
 layout_spectrum: 0.90401
 typography_spectrum: 0.85113
@@ -22,8 +22,8 @@ color:
     - '#ffffff'
     - '#bca65b'
     - '#045a7b'
-  brandStrength: 0.1875
-  lightness: 0.4375
-  saturation: 0.1875
+  brandStrength: 0
+  lightness: 0
+  saturation: 0.5
   rhythmicContrast: 0.25
 purpose: []
