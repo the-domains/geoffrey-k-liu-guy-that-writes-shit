@@ -2,16 +2,23 @@
     <channel>
         <title><![CDATA[Geoffrey K. Liu, Author]]></title>
         <description><![CDATA[Geoffrey K. Liu, Author]]></description>
-        <link>http://github.com/dylang/node-rss</link>
+        <link>http://www.geoffreyliu.com/</link>
         <generator>The Grid</generator>
-        <lastBuildDate>Thu, 21 Jul 2016 18:10:55 GMT</lastBuildDate>
-        <atom:link href="undefinedrss.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Thu, 21 Jul 2016 18:39:50 GMT</lastBuildDate>
+        <atom:link href="http://www.geoffreyliu.com/rss.xml" rel="self" type="application/rss+xml"/>
         <item>
             <title><![CDATA[No title]]></title>
             <description><![CDATA[<p>Deep in a tomb, a baby cried, was it just born, or has it just died?</p>]]></description>
-            <link>undefineddeep-in-a-tomb-a-baby-cried-was-it-just-born-or-has-it-ju/index.html</link>
+            <link>http://www.geoffreyliu.com/deep-in-a-tomb-a-baby-cried-was-it-just-born-or-has-it-ju/index.html</link>
             <guid isPermaLink="false">623be265-b6af-4ad6-9665-2c521db5ea7d</guid>
             <pubDate>Thu, 21 Jul 2016 18:10:54 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[<img src="https://the-grid-user-content.s3-us-west-2.amazonaws.com/38e6abdc-20fe-4029-9cb9-f07970911768.jpg">]]></description>
+            <link>http://www.geoffreyliu.com/7cb04189-3c2e-49a8-996b-ddf95c59b222/index.html</link>
+            <guid isPermaLink="false">7cb04189-3c2e-49a8-996b-ddf95c59b222</guid>
+            <pubDate>Thu, 21 Jul 2016 18:39:48 GMT</pubDate>
         </item>
     </channel>
 </rss>
