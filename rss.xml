@@ -2,16 +2,16 @@
     <channel>
         <title><![CDATA[Geoffrey K. Liu, Author]]></title>
         <description><![CDATA[Geoffrey K. Liu, Author]]></description>
-        <link>http://github.com/dylang/node-rss</link>
+        <link>http://www.geoffreyliu.com/</link>
         <generator>The Grid</generator>
-        <lastBuildDate>Fri, 22 Jul 2016 19:01:17 GMT</lastBuildDate>
-        <atom:link href="undefinedrss.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Fri, 22 Jul 2016 19:01:30 GMT</lastBuildDate>
+        <atom:link href="http://www.geoffreyliu.com/rss.xml" rel="self" type="application/rss+xml"/>
         <item>
             <title><![CDATA[No title]]></title>
             <description><![CDATA[<img src="https://the-grid-user-content.s3-us-west-2.amazonaws.com/956d3255-7a01-46b1-a30e-87c93ba35646.jpg">]]></description>
-            <link>undefinedea70f4d9-5d77-4c54-a7fc-1277b7b34976/index.html</link>
+            <link>http://www.geoffreyliu.com/ea70f4d9-5d77-4c54-a7fc-1277b7b34976/index.html</link>
             <guid isPermaLink="false">ea70f4d9-5d77-4c54-a7fc-1277b7b34976</guid>
-            <pubDate>Fri, 22 Jul 2016 19:00:25 GMT</pubDate>
+            <pubDate>Fri, 22 Jul 2016 19:01:26 GMT</pubDate>
         </item>
     </channel>
 </rss>
